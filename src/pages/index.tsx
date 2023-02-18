@@ -1,11 +1,11 @@
-"use client";
-import { FC, useState, useEffect } from "react";
-import { PopupModal } from "react-calendly";
-import { useRouter } from "next/router";
+"use client"
+import { FC, useState, useEffect } from "react"
+import { PopupModal } from "react-calendly"
+import { useRouter } from "next/navigation"
 
-import { TopBar } from "@/components";
-import { analytic, Constants } from "@/helpers";
-import { landingSchema } from "@/helpers/constants";
+import { TopBar } from "@/components"
+import { analytic, Constants } from "@/helpers"
+import { landingSchema } from "@/helpers/constants"
 
 import {
   FAQ,
@@ -18,35 +18,35 @@ import {
   Results,
   TripleSlider,
   ZeroRisk,
-} from "@/pages-component/landing";
+} from "@/pages-component/landing"
 
 export interface HeroesProps {}
 
 const Landing: FC<HeroesProps> = () => {
-  const router = useRouter();
-  const [doc, setDoc] = useState<HTMLElement>();
+  const router = useRouter()
+  const [doc, setDoc] = useState<HTMLElement>()
   const [calendly, setCalendly] = useState({
     open: false,
     link: "",
-  });
-  const [email, setEmail] = useState("");
+  })
+  const [email, setEmail] = useState("")
 
   useEffect(() => {
     setDoc(
       (typeof window !== "undefined" && document.getElementById("root")) ||
         document.body
-    );
-  }, []);
+    )
+  }, [])
 
   useEffect(() => {
     analytic("pageView", {
       page_title: Constants.PAGES.MAIN_LANDING,
       page_url: window.location.href,
-    });
-  }, []);
+    })
+  }, [])
 
   if (router.isFallback) {
-    return <h1>Loading...</h1>;
+    return <h1>Loading...</h1>
   }
 
   return (
@@ -75,7 +75,7 @@ const Landing: FC<HeroesProps> = () => {
         onCalendly={setCalendly}
       />
     </>
-  );
-};
+  )
+}
 
-export default Landing;
+export default Landing
