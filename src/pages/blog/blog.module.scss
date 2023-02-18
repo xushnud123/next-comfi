@@ -1,0 +1,18 @@
+.wrapper {
+  background: #f5f7f7;
+  width: 100%;
+  min-height: 100vh;
+  .container {
+    max-width: 908px;
+    width: 100%;
+    margin: 0 auto;
+    @media screen and (max-width: 928px) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    padding: 150px 0 90px 0;
+    @media screen and (max-width: 750px) {
+      padding-top: 180px;
+    }
+  }
+}

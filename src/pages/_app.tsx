@@ -15,7 +15,7 @@ interface MyAppProps extends AppProps {}
 
 const MyApp: FC<MyAppProps> = ({ Component, pageProps }) => {
   const [queryClient] = useState(() => new QueryClient());
-  console.log("first");
+
   return (
     <QueryClientProvider client={queryClient}>
       <ContextProvider>

@@ -9,9 +9,11 @@ const useSlugs = ({ slug }: { slug: string }) => {
     const id = queryKey[1];
     const data = await axios
       .get(
-        `${process.env.REACT_APP_WP_BASE_URL}/wp-json/wp/v2/posts/?slug=${id}`
+        `https://comfi-blog-70fa24.ingress-daribow.ewp.live
+/wp-json/wp/v2/posts/?slug=${id}`
       )
       .then((res) => res.data);
+
     const slug = Slugs(data);
 
     return slug[0];

@@ -1,7 +1,6 @@
 import { FC } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import * as Scroll from "react-scroll";
 
 import { SortDate } from "@/helpers/helpers";
@@ -32,18 +31,20 @@ const Blog: FC<Types.BlogsData.Blogs> = ({
 
   return (
     <>
-      <Link onClick={scrollFunction} href={`blog/${slug}`} className={cls.blog}>
+      <Link
+        onClick={scrollFunction}
+        href={`/blog/${slug}`}
+        className={cls.blog}>
         <div className={cls["blog-wrap"]}>
           <div className={cls.left}>
             <Image
-              loader={GraphCMSImageLoader}
               className={cls.hero}
               src={url || twitter_img}
               alt='img not found'
+              loader={GraphCMSImageLoader}
               fill
-              // width='100'
-              // height='100'
-              priority
+              unoptimized={true}
+              sizes='100%'
             />
           </div>
           <div className={cls.right}>
@@ -65,8 +66,8 @@ const Blog: FC<Types.BlogsData.Blogs> = ({
                   alt='img not found'
                   width='30'
                   height='30'
+                  unoptimized={true}
                   loader={GraphCMSImageLoader}
-                  priority
                 />
                 <p className={cls.text}>{author}</p>
               </div>

@@ -1,0 +1,196 @@
+.wrapper {
+  width: 100%;
+  .date {
+    display: block;
+    text-align: center;
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 17px;
+    color: #000000;
+  }
+  .title {
+    margin-top: 16px;
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 650;
+    font-size: 55px;
+    line-height: 65px;
+    color: #000000;
+    text-align: center;
+    @media screen and (max-width: 900px) {
+      font-size: 40px;
+      line-height: 45px;
+    }
+    @media screen and (max-width: 550px) {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+  .row {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+    .btn {
+      padding: 4px 8px;
+      font-family: "Work Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 17px;
+      color: #000000;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 8px;
+      background: transparent;
+    }
+    .text {
+      font-family: "Work Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 17px;
+      color: #000000;
+    }
+  }
+  .hero-images {
+    position: relative;
+    width: 100%;
+    height: 477px;
+    margin-top: 48px;
+    margin-bottom: 76px;
+    .images {
+      width: 100%;
+      height: auto;
+      max-height: 100%;
+      border-radius: 16px;
+
+    }
+  }
+  .description {
+    h2 {
+      font-family: "Work Sans";
+      font-style: normal;
+      font-weight: 650;
+      font-size: 24px;
+      line-height: 28px;
+      color: #000000;
+      max-width: 580px;
+      margin: 48px auto 0 auto;
+      max-width: 580px;
+    }
+
+    h3 {
+      font-family: "Work Sans";
+      font-style: normal;
+      font-weight: 650;
+      font-size: 20px;
+      line-height: 24px;
+      color: #000000;
+      max-width: 580px;
+      margin: 48px auto 0 auto;
+      max-width: 580px;
+    }
+    p,
+    li,
+    blockquote {
+      margin-top: 12px;
+      font-family: "Work Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+      color: #000000;
+      margin: 12px auto 0 auto;
+      max-width: 580px;
+    }
+    a {
+      font-family: "Work Sans";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 26px;
+      font-weight: normal;
+      transition: all linear 0.2s;
+      margin: 0 auto;
+      max-width: 580px;
+    }
+    mark {
+      background: var(--green);
+      margin: 0 auto;
+      max-width: 580px;
+    }
+    img {
+      margin-top: 48px;
+      margin-bottom: 36px;
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+    }
+    h4 {
+      margin-bottom: 36px;
+      font-family: "Work Sans";
+      font-style: normal;
+      font-weight: 650;
+      font-size: 22px;
+      line-height: 26px;
+      color: #000000;
+      margin: 48px auto 0 auto;
+      max-width: 580px;
+    }
+    p {
+      margin: 16px auto 0 auto;
+      max-width: 580px;
+      font-family: "Work Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+      color: #000000;
+
+      strong {
+        font-style: italic;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 26px;
+        color: #000000;
+      }
+    }
+    blockquote {
+      border-left: 4px solid #000;
+      padding-left: 30px;
+      margin: 0 auto;
+      max-width: 580px;
+    }
+    ol,
+    ul {
+      padding-left: 50px;
+      @media screen and (max-width: 450px) {
+        padding-left: 30px;
+      }
+    }
+    li {
+      strong {
+        font-family: "Work Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 26px;
+        color: #000000;
+      }
+    }
+    figcaption {
+      margin: 16px auto 0 auto;
+      max-width: 580px;
+      font-family: "Work Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+      color: #000000;
+    }
+  }
+}
