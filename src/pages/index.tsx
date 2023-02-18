@@ -45,10 +45,6 @@ const Landing: FC<HeroesProps> = () => {
     })
   }, [])
 
-  if (router.isFallback) {
-    return <h1>Loading...</h1>
-  }
-
   return (
     <>
       <TopBar onCalendly={setCalendly} />
