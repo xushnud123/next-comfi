@@ -1,0 +1,190 @@
+@mixin container_block($width: 100%, $max_width: 100%, $top_bottom: 0, $left_right: 0) {
+  width: $width;
+  max-width: $max_width;
+  padding: $top_bottom $left_right;
+}
+
+.difference {
+  width: 100%;
+  background: var(--secondary);
+  padding-top: 1px;
+  .hero_container {
+    border-radius: 40px;
+    width: 100%;
+    @media screen and (min-width: 1450px) {
+      padding: 100px 0;
+    }
+    @media screen and (max-width: 1450px) {
+      box-sizing: border-box;
+      @include container_block(100%, 100%, 120px, 140px);
+    }
+    @media screen and (max-width: 1200px) {
+      @include container_block(100%, 100%, 100px, 60px);
+    }
+    @media screen and (max-width: 900px) {
+      @include container_block(100%, 100%, 80px, 30px);
+    }
+    @media screen and (max-width: 420px) {
+      @include container_block(100%, 100%, 50px, 10px);
+    }
+    background: var(--primary);
+    .row {
+      width: 100%;
+      max-width: 1170px;
+      margin: 0 auto;
+      border-radius: 20px;
+
+      .video_container {
+        width: 100%;
+        video {
+          width: 100%;
+          height: 530px;
+          @media screen and (max-width: 1200px) {
+            height: auto;
+          }
+        }
+        @media screen and (max-width: 1200px) {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.plan {
+  margin-top: 33px;
+  min-height: 182px;
+  .switch_card {
+    .title {
+      font-family: 'Neue Machina';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 42px;
+      color: var(--secondary);
+      span {
+        padding: 8px 16px;
+        color: var(--primary);
+        background: var(--secondary);
+        border-radius: 20px;
+      }
+    }
+    .description {
+      font-family: 'Gordita';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 25px;
+      color: var(--secondary);
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      span {
+        img {
+          width: 14.43px;
+          height: 13.97px;
+        }
+        margin-right: 11px;
+      }
+      &:nth-child(2) {
+        margin-top: 29px;
+      }
+      @media screen and (max-width: 420px) {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.switch {
+  width: max-content;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 22px;
+  padding: 2px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  .circle {
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    background: var(--green);
+    width: 119px;
+    height: 43px;
+    border-radius: 20px;
+    z-index: 1;
+    // transition: all linear 0.225s;
+  }
+  .btn {
+    z-index: 2;
+    width: 119px;
+    height: 43px;
+    cursor: pointer;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Gordita';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 0;
+    color: var(--secondary);
+    padding: 15px 20px;
+    box-sizing: border-box;
+    &:nth-child(1) {
+      margin-right: 10px;
+    }
+    &:nth-child(2) {
+      width: 150px;
+      height: 43px;
+    }
+    @media screen and (max-width: 350px) {
+      font-size: 12px;
+      padding: 15px 15px;
+    }
+  }
+
+  &.active {
+    .circle {
+      position: absolute;
+      left: 131px;
+      top: 2px;
+      background: var(--green);
+      width: 150px;
+      height: 43px;
+      border-radius: 20px;
+      z-index: 1;
+    }
+    @media screen and (max-width: 420px) {
+      .circle {
+        width: 50%;
+        left: calc(50% - 2px);
+      }
+    }
+  }
+
+  @media screen and (max-width: 420px) {
+    width: 100%;
+    .btn {
+      width: 50%;
+      padding: 15px 30px;
+      &:nth-child(1) {
+        margin-right: 0;
+      }
+      &:nth-child(2) {
+        width: 50%;
+        height: 43px;
+      }
+    }
+    .circle {
+      width: 50%;
+    }
+  }
+}

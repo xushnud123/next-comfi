@@ -1,0 +1,79 @@
+
+.accordion__section {
+  display: flex;
+  flex-direction: column;
+  border: 1.2px solid #fff;
+  border-radius: 30px;
+  padding: 20px;
+  box-sizing: border-box;
+  &:not(:nth-child(1)) {
+    margin-top: 12px;
+  }
+}
+
+.accordion {
+  color: #444;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  outline: none;
+  transition: all 0.225s linear;
+}
+
+.icon {
+  width: 45px;
+  min-width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.2px solid #ffffff;
+  border-radius: 100px;
+  img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* Style the accordion content title */
+.accordion__title {
+  font-family: 'Gordita';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 34px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.accordion__icon {
+  margin-left: auto;
+  transition: transform 0.3s linear;
+}
+
+/* Style to rotate icon when state is active */
+.rotate {
+  transform: rotate(90deg);
+}
+
+/* Style the accordion content panel. Note: hidden by default */
+.accordion__content {
+  background-color: transparent;
+  overflow: hidden;
+  transition: max-height 0.3s linear;
+}
+
+/* Style the accordion content text */
+.accordion__text {
+  font-family: 'Gordita';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  align-items: center;
+  box-sizing: border-box;
+  color: #fff;
+}

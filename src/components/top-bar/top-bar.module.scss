@@ -1,0 +1,9 @@
+.wrapper {
+  display: block;
+  height: max-content;
+  z-index: 99;
+
+  &.active {
+    position: fixed;
+  }
+}

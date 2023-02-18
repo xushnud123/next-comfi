@@ -1,0 +1,32 @@
+@mixin d-flex($j-s: center, $a-i: center, $f-d: row) {
+  display: flex;
+  justify-content: $j-s;
+  align-items: $a-i;
+  flex-direction: $f-d;
+}
+
+@mixin theme-light {
+  --primary: #fff;
+  --secondary: #000;
+  --green: #51fc8f;
+  --inputColor: rgba(0, 0, 0, 0.6);
+}
+
+@mixin center {
+  max-width: 1170px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  @media screen and (max-width: 1450px) {
+    max-width: 100%;
+    padding: 0 120px;
+  }
+  @media screen and (max-width: 1200px) {
+    padding: 0 60px;
+  }
+  @media screen and (max-width: 900px) {
+    padding: 0 30px;
+  }
+  @media screen and (max-width: 420px) {
+    padding: 0 10px;
+  }
+}

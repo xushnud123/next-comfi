@@ -1,0 +1,75 @@
+@mixin center {
+  @media screen and (max-width: 1450px) {
+    max-width: 100%;
+    padding: 0 120px;
+  }
+  @media screen and (max-width: 1200px) {
+    padding: 0 60px;
+  }
+  @media screen and (max-width: 900px) {
+    padding: 0 30px;
+  }
+  @media screen and (max-width: 420px) {
+    padding: 0 10px;
+  }
+}
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  .container {
+    height: 100vh;
+    position: fixed;
+    z-index: 101;
+    @include center();
+    box-sizing: border-box;
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .row {
+      width: 100%;
+      border-radius: 40px;
+      height: 465px;
+      display: flex;
+      justify-content: center;
+      @media screen and (max-width: 1400px) {
+        height: 400px;
+      }
+      @media screen and (max-width: 600px) {
+        height: 465px;
+      }
+      :global(.player) {
+        width: 100% !important;
+        height: 465px !important;
+        @media screen and (max-width: 1400px) {
+          height: 400px !important;
+        }
+        @media screen and (max-width: 600px) {
+          height: 465px !important;
+        }
+      }
+    }
+  }
+}
+
+.landing {
+  .container {
+    .row {
+      width: max-content;
+      height: auto !important;
+    }
+  }
+}

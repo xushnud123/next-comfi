@@ -1,0 +1,15 @@
+export { default as Cards } from "./cards/cards";
+export { default as Difference } from "./difference/difference";
+export { default as FAQ } from "./faq/faq";
+export { default as FlexiblePayment } from "./flexible-payment/flexible-payment";
+export { default as Hero } from "./hero/hero";
+export { default as HowWeFinance } from "./how-we-finance/how-we-finance";
+export { default as Integrations } from "./integrates/integrates";
+export { default as LandingFooter } from "./landing-footer/landing-footer";
+export { default as Now } from "./now/now";
+export { default as Results } from "./results/results";
+export { default as Revenue } from "./revenue/revenue";
+export { default as Slider } from "./slider/slider";
+export { default as TripleSlider } from "./triple-slider/triple-slider";
+export { default as ZeroRisk } from "./zero-risk/zero-risk";
+export { default as Latest } from "./latest/latest";

@@ -1,0 +1,348 @@
+@import '../../assets/styles/mixins';
+
+@mixin btn {
+  cursor: pointer;
+  gap: 6px;
+  background: #000000;
+  border-radius: 100px;
+  border: 1px solid transparent;
+  font-family: 'Gordita';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 15px;
+  text-align: center;
+  color: #51fc8f;
+  transition: linear 0.225s;
+  transition-property: background-color;
+  &:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+  padding: 100px 0 140px;
+  .contain {
+    width: 100%;
+    .container {
+      @include center();
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 6;
+      .row {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          svg {
+            color: #000;
+          }
+          a {
+            cursor: pointer;
+            text-decoration: none;
+          }
+          span {
+            display: flex !important;
+            align-items: center !important;
+            img {
+              height: 33px;
+              width: auto;
+            }
+          }
+          .btn {
+            padding: 8px 10px;
+            @include btn();
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            img {
+              width: 15px;
+              height: 15px;
+            }
+          }
+        }
+        .links {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          .link {
+            width: 38px;
+            height: 36px;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 16px;
+            background: rgba(0, 0, 0, 0.08);
+            border: 1px solid transparent;
+            transition: all linear 0.325s;
+            transition-property: border-color;
+            color: #000;
+            &:hover {
+              border: 1px solid #000000;
+            }
+          }
+        }
+        @media screen and (max-width: 750px) {
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+      .text-wrap {
+        margin-top: 30px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        align-items: center;
+        @media screen and (max-width: 650px) {
+          justify-content: flex-start;
+          flex-wrap: wrap;
+          gap: 25px;
+        }
+        p {
+          font-family: 'Gordita';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 23px;
+          display: flex;
+          align-items: center;
+          color: #000000;
+          @media screen and (max-width: 650px) {
+            display: block;
+            width: 100%;
+            text-align: start;
+          }
+        }
+        .call {
+          font-family: 'Gordita';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 23px;
+          color: #000000;
+          span {
+            padding: 10px 14px 9px;
+            border: 1px solid #000000;
+            border-radius: 100px;
+            margin-right: 8px;
+            font-family: 'Gordita';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 23px;
+            color: #000000;
+            @media screen and (max-width: 650px) {
+              border: 0px solid transparent;
+              padding: 0;
+            }
+          }
+        }
+        .line {
+          margin: 0 10px;
+          height: 39px;
+          width: 1px;
+          transform: rotate(45deg);
+          background: #000000;
+          @media screen and (max-width: 650px) {
+            display: none;
+          }
+        }
+        .state {
+          font-family: 'Gordita';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 23px;
+          color: #000000;
+          span {
+            padding: 10px 14px 9px;
+            border: 1px solid #000000;
+            border-radius: 100px;
+            margin-left: 8px;
+            @media screen and (max-width: 650px) {
+              border: 0px solid transparent;
+              padding: 0;
+            }
+          }
+        }
+      }
+      .card {
+        margin-top: 30px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        &-left {
+          p {
+            font-family: 'Gordita';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 13px;
+            color: #000000;
+            @media screen and (max-width: 650px) {
+              text-align: center;
+            }
+          }
+          @media screen and (max-width: 650px) {
+            order: 2;
+          }
+        }
+        &-right {
+          display: flex;
+          .card-header {
+            width: 190px;
+            h1 {
+              font-family: 'Gordita';
+              font-style: normal;
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 15px;
+              color: #000000;
+            }
+            .card-body {
+              a {
+                display: block;
+                text-decoration: none;
+                font-family: 'Gordita';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 13px;
+                color: #000000;
+                margin-top: 15px;
+                &:not(:nth-child(1)) {
+                  margin-top: 10px;
+                }
+                @media screen and (max-width: 650px) {
+                  margin: 0;
+                  &:not(:nth-child(1)) {
+                    margin-top: 0;
+                  }
+                }
+              }
+              @media screen and (max-width: 650px) {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                margin-top: 15px;
+              }
+            }
+            @media screen and (max-width: 650px) {
+              width: 50%;
+            }
+            @media screen and (max-width: 490px) {
+              width: 100%;
+            }
+          }
+          @media screen and (max-width: 650px) {
+            order: 1;
+          }
+          @media screen and (max-width: 490px) {
+            // flex-direction: column;
+            gap: 30px;
+          }
+        }
+        @media screen and (max-width: 650px) {
+          flex-direction: column;
+          gap: 30px;
+        }
+      }
+    }
+  }
+  &.landing {
+    background: #000;
+    .contain {
+      .row {
+        .logo {
+          svg {
+            color: #fff;
+          }
+          .btn {
+            background: #fff;
+            color: #000;
+            &:hover {
+              background: rgba(255, 255, 255, 0.8);
+            }
+          }
+        }
+        .links {
+          .link {
+            border: 1px solid transparent;
+            transition: all linear 0.325s;
+            border-radius: 16px;
+            svg {
+              color: #fff;
+            }
+            &:hover {
+              border: 1px solid #fff;
+            }
+          }
+        }
+        @media screen and (max-width: 750px) {
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+      .text-wrap {
+        p {
+          color: #fff;
+        }
+        .call {
+          color: #fff;
+          span {
+            color: #fff;
+          }
+        }
+        .line {
+          background: #fff;
+        }
+        .state {
+          color: #fff;
+        }
+      }
+      .card {
+        &-left {
+          p {
+            color: #fff;
+            opacity: 0.6;
+          }
+        }
+        &-right {
+          .card-header {
+            h1 {
+              color: #fff;
+            }
+            .card-body {
+              a {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.slug {
+    background: #ffffff;
+    padding-bottom: 0;
+    padding-bottom: 90px;
+  }
+  &.blog {
+    background: #f5f7f7;
+  }
+  @media screen and (max-width: 750px) {
+    padding: 90px 0 90px;
+  }
+}

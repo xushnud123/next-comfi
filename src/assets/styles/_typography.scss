@@ -1,0 +1,81 @@
+@font-face {
+  font-family: 'Gordita';
+  src: url('../fonts/gordita/Gordita-Regular.woff2') format('woff2'),
+    url('../fonts/gordita/Gordita-Regular.woff') format('woff'),
+    url('../fonts/gordita/Gordita-Regular.ttf') format('truetype'),
+    url('../fonts/gordita/Gordita-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gordita';
+  src: url('../fonts/gordita/Gordita-Medium.woff2') format('woff2'),
+    url('../fonts/gordita/Gordita-Medium.woff') format('woff'),
+    url('../fonts/gordita/Gordita-Medium.ttf') format('truetype'),
+    url('../fonts/gordita/Gordita-Medium.eot?#iefix') format('embedded-opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Machina';
+  src: url('../fonts/neue-machina/NeueMachina-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Neue Machina';
+  src: url('../fonts/neue-machina/NeueMachina-Ultrabold.woff2') format('opentype');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Machina';
+  src: url('../fonts/neue-machina/NeueMachina-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Neue Machina';
+  src: url('../fonts/neue-machina/NeueMachina-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Neue Machina';
+  src: url('../fonts/neue-machina/NeueMachina-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../fonts/Work_Sans/static/WorkSans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../fonts/Work_Sans/static/WorkSans-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../fonts/Work_Sans/static/WorkSans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

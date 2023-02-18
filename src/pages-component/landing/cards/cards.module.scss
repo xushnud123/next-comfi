@@ -1,0 +1,154 @@
+@mixin d_flex($align, $justify, $diriection: row) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $diriection;
+}
+
+@mixin container_block(
+  $width: 100%,
+  $max_width: 100%,
+  $top_bottom: 0,
+  $left_right: 0
+) {
+  width: $width;
+  max-width: $max_width;
+  padding: $top_bottom $left_right;
+}
+
+.wrapper {
+  padding: 1px 0;
+  width: 100%;
+  background: var(--secondary);
+  box-sizing: border-box;
+  .hero_container {
+    width: 100%;
+    border-radius: 40px;
+    background: var(--primary);
+    overflow: hidden;
+    @media screen and (max-width: 1450px) {
+      box-sizing: border-box;
+      @include container_block(100%, 100%, 0, 140px);
+    }
+    @media screen and (max-width: 1200px) {
+      @include container_block(100%, 100%, 0, 60px);
+    }
+    @media screen and (max-width: 900px) {
+      @include container_block(100%, 100%, 0, 0);
+      background: var(--secondary);
+    }
+    .statements {
+      max-width: 1170px;
+      margin: 0 auto;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      .statement {
+        @include d_flex(flex-start, flex-start, column);
+        padding: 65px 0 60px 0;
+        min-height: 330px;
+        position: relative;
+        z-index: 1;
+        box-sizing: border-box;
+        border-radius: 20px;
+        &:nth-child(1) {
+          border-top-right-radius: 20px;
+          border-bottom-right-radius: 20px;
+        }
+        &:nth-child(2) {
+          .wrap {
+            @include d_flex(center, center, column);
+            .wrap_images {
+              @include container_block(100%, 200px, 0, 0);
+            }
+          }
+          @media screen and (min-width: 900px) {
+            &::before {
+              content: "";
+              position: absolute;
+              width: 1px;
+              height: 100%;
+              top: 0;
+              left: -20px;
+              background: var(--secondary);
+              z-index: 2;
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              width: 1px;
+              height: 100%;
+              top: 0;
+              right: -20px;
+              background: var(--secondary);
+              z-index: 2;
+            }
+          }
+          @media screen and (max-width: 900px) {
+            border-left: 1px solid var(--secondary);
+            border-right: 1px solid var(--secondary);
+            box-sizing: border-box;
+            border-radius: 20px;
+            overflow: hidden;
+          }
+        }
+        &:nth-child(3) {
+          .wrap {
+            @include d_flex(flex-end, center, column);
+            .wrap_images {
+              @include container_block(100%, 200px, 0, 0);
+            }
+          }
+        }
+        .wrap {
+          width: 100%;
+          img {
+            width: 80px;
+            height: 80px;
+          }
+          .subtitle {
+            margin-top: 15px;
+            font-family: "Gordita";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            color: var(--secondary);
+            max-width: 200px;
+            @media screen and (max-width: 900px) {
+              max-width: 100%;
+            }
+          }
+
+          @media screen and (max-width: 450px) {
+            @include container_block(100%, 290px, 0, 20px);
+            box-sizing: border-box;
+            p {
+              width: 100%;
+              max-width: 100%;
+              @include container_block(100%, 100%, 0, 0);
+            }
+          }
+        }
+        @media screen and (max-width: 900px) {
+          padding: 65px 20px;
+          overflow: hidden;
+          background-color: var(--primary);
+        }
+        @media screen and (max-width: 780px) {
+          width: 290px;
+          min-width: 290px;
+        }
+      }
+      @media screen and (max-width: 780px) {
+        display: flex;
+        overflow-x: scroll;
+      }
+    }
+  }
+  transition: transform 0.5s, opacity 0.5s;
+  :global(.hidden) {
+    opacity: 0;
+    transform: translateY(8rem);
+  }
+}

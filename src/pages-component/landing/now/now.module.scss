@@ -1,0 +1,103 @@
+@import '../../../assets/styles/mixins';
+
+.wrapper {
+  width: 100%;
+  margin-top: 1px;
+  display: block;
+  padding: 50px 0;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 40px;
+  overflow: hidden;
+  box-sizing: border-box;
+  .container {
+    @include center();
+    .row {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border: 1.2px solid #000000;
+      border-radius: 30px;
+      padding: 40px 25px;
+      @media screen and (max-width: 750px) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 35px;
+        box-sizing: border-box;
+      }
+      .left {
+        align-self: center;
+        .text {
+          font-family: 'Gordita';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 27px;
+          color: #000000;
+        }
+      }
+      .right {
+        width: 100%;
+        justify-self: flex-end;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: flex-end;
+        .card {
+          width: max-content;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .btn {
+            padding: 20px 35px 18px;
+            cursor: pointer;
+            background: #51fc8f;
+            border-radius: 15px;
+            font-family: 'Gordita';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 24px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            color: #000000;
+            transition: linear 0.225s;
+            border: 1.5px solid #000000;
+            box-sizing: border-box;
+            box-shadow: 2px 2px 0px transparent;
+            transition: box-shadow background-color border-color;
+            &:hover {
+              border: 1.5px solid var(--secondary);
+              box-shadow: 2px 2px 0px var(--secondary);
+              background: var(--primary);
+            }
+            @media screen and (max-width: 450px) {
+              width: 100%;
+            }
+          }
+          .pdf {
+            background: 0;
+            border: 0;
+            margin-top: 8px;
+            font-family: 'Gordita';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            text-align: center;
+            color: #000000;
+          }
+          @media screen and (max-width: 750px) {
+            justify-self: center;
+            justify-content: center;
+            margin: 0 auto;
+          }
+          @media screen and (max-width: 450px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

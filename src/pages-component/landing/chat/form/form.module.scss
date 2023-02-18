@@ -1,0 +1,469 @@
+.wrapper {
+  display: block;
+  height: 600px;
+  background: #fff;
+  margin-top: 1px;
+  border-radius: 40px;
+  &::-webkit-scrollbar-thumb {
+    width: 1px !important;
+    border-radius: 100px !important;
+    background: #000 !important;
+  }
+  max-width: 810px;
+  margin: 0 auto;
+  .container {
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+    @media screen and (max-width: 810px) {
+      grid-template-columns: repeat(1, 1fr);
+      max-width: 410px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    @media screen and (max-width: 450px) {
+      padding: 0;
+    }
+    .left {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      background-size: 100% 100%;
+      background-position: center;
+      box-sizing: border-box;
+      padding-top: 40px;
+      padding-bottom: 119px;
+
+      background-image: url("../../../../assets/images/form/Cover\ 2.webp");
+      .closeBtn {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        @media screen and (max-width: 810px) {
+          padding: 0 20px;
+        }
+        button {
+          display: none;
+          @media screen and (max-width: 810px) {
+            display: block;
+          }
+          cursor: pointer;
+          background-color: transparent;
+          border-radius: 50%;
+          border: 0;
+        }
+        .close {
+          width: 30px;
+          height: 30px;
+          @media screen and (max-width: 810px) {
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+
+        .title {
+          font-family: "Gordita";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 9.99142px;
+          line-height: 11px;
+          color: #000000;
+        }
+        img {
+          width: 86.59px;
+          height: 23.31px;
+        }
+        .pdf2 {
+          @media screen and (min-width: 810px) {
+            display: none;
+          }
+          img {
+            width: 140.8px;
+            height: auto;
+            object-fit: cover;
+          }
+        }
+      }
+      .card {
+        .description {
+          box-sizing: border-box;
+          padding: 0 24px;
+          font-family: "Gordita";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 49.7133px;
+          line-height: 84.9%;
+          text-align: center;
+          font-feature-settings: "ss01" on, "ss03" on;
+          color: #000000;
+          span {
+            line-height: 95%;
+            border: 2.13961px solid #000000;
+            border-radius: 213.961px;
+            padding: 8px 0px 5px 15px;
+            @media screen and (max-width: 810px) {
+              padding-bottom: 2px;
+            }
+          }
+          @media screen and (max-width: 810px) {
+            font-size: 30.8695px;
+            line-height: 90%;
+          }
+        }
+        @media screen and (max-width: 810px) {
+          margin-top: 17.5px;
+        }
+      }
+      .pdf {
+        @media screen and (max-width: 810px) {
+          display: none;
+        }
+      }
+      @media screen and (min-width: 810px) {
+        border-radius: 40px 0 0 40px;
+      }
+
+      @media screen and (max-width: 810px) {
+        padding-top: 14px;
+        padding-bottom: 19px;
+        min-height: 173px;
+        height: 100%;
+        border-radius: 40px 40px 0 0;
+        width: 100%;
+      }
+    }
+    .right {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 20px 40px 0 40px;
+      .wrap {
+        margin-top: 20px;
+        .title {
+          font-family: "Work Sans";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 27px;
+          color: #000000;
+        }
+        .text {
+          font-family: "Work Sans";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 19px;
+          color: #000000;
+        }
+        .line {
+          margin: 20px 0;
+          width: 100%;
+          height: 1px;
+          background: rgba(0, 0, 0, 0.2);
+        }
+        .form {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          label {
+            font-family: "Gordita";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 13px;
+            font-feature-settings: "kern" off;
+            color: #000000;
+            input {
+              margin-top: 4px;
+              width: 100%;
+              height: 44px;
+              display: block;
+              font-family: "Gordita";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 13px;
+              font-feature-settings: "kern" off;
+              color: #000000;
+              background: #ffffff;
+              border: 1px solid rgba(0, 0, 0, 0.2);
+              box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+              border-radius: 12px;
+              padding: 0 16px;
+              &:focus-visible {
+                outline: none;
+              }
+              &.error {
+                border: 1px solid rgba(252, 87, 88, 0.15);
+                /* Default shadows/400 */
+                box-shadow: rgba(252, 87, 88, 0.15) 0px 0px 0px 3px !important;
+              }
+            }
+          }
+          .select {
+            width: 100%;
+            display: block;
+            font-family: "Gordita";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 13px;
+            font-feature-settings: "kern" off;
+            color: #000000;
+            .custom-select {
+              margin-top: 4px;
+              :global(.react-select__control) {
+                height: 44px !important;
+                border: 1px solid rgba(0, 0, 0, 0.2) !important;
+                box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1) !important;
+                border-radius: 12px !important;
+                padding: 0 16px !important;
+              }
+              :global(.react-select__control) {
+                height: 44px !important;
+                border: 1px solid rgba(0, 0, 0, 0.2) !important;
+                box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1) !important;
+                border-radius: 12px !important;
+                padding: 0 16px !important;
+              }
+              :global(.react-select__control--menu-is-open) {
+                box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1) !important;
+                box-shadow: rgba(96, 255, 131, 0.4) 0px 0px 0px 3px !important;
+                transition: ease-in-out 0.225s;
+                transition: box-shadow 0.3s ease-in-out;
+              }
+              :global(.react-select__indicator-separator) {
+                display: none !important;
+              }
+              :global(.react-select__value-container) {
+                padding: 0 !important;
+              }
+              :global(.react-select__dropdown-indicator) {
+                padding: 0 !important;
+                color: #000000 !important;
+              }
+
+              :global(.react-select__placeholder) {
+                font-family: "Gordita" !important;
+                font-style: normal !important;
+                font-weight: 400 !important;
+                font-size: 12px !important;
+                line-height: 13px !important;
+                font-feature-settings: "kern" off;
+                color: rgba(0, 0, 0, 0.4) !important;
+              }
+              :global(.react-select__menu) {
+                box-sizing: border-box;
+                padding: 8px 19px 8px 8px !important;
+                box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1) !important;
+                border-radius: 12px !important;
+              }
+              :global(.react-select__menu-list) {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 3px !important;
+                height: 144px !important;
+                overflow-y: scroll;
+                &::-webkit-scrollbar-thumb {
+                  width: 1px !important;
+                  border-radius: 100px !important;
+                  background: #000 !important;
+                }
+              }
+              :global(.react-select__option) {
+                padding: 12px 8px 11px !important;
+                box-sizing: border-box !important;
+                border-radius: 12px !important;
+                font-family: "Gordita" !important;
+                font-style: normal !important;
+                font-weight: 400 !important;
+                font-size: 12px !important;
+                line-height: 13px !important;
+                font-feature-settings: "kern" off !important;
+                color: #000000 !important;
+                transition: all ease-out 0.225s !important;
+                transition-property: background !important;
+                background: #fff !important;
+                &:hover {
+                  background: rgba(0, 0, 0, 0.02) !important;
+                }
+              }
+              :global(.react-select__option--is-selected) {
+                background: rgba(0, 0, 0, 0.04) !important;
+              }
+              :global(.react-select__option--is-focused) {
+                background: #fff !important;
+              }
+              &:focus-visible {
+                outline: none;
+              }
+            }
+          }
+          .btn {
+            cursor: pointer;
+            height: 55px;
+            background: rgb(81, 252, 143);
+            border: 1.2px solid #000000;
+            border-radius: 15px;
+            font-family: "Gordita";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 17px;
+            text-align: center;
+            color: #000000;
+            transition: all linear 0.225s;
+            border: 1.2px solid #000000;
+            &:hover {
+              border: 1px solid var(--secondary);
+              box-shadow: 2px 2px 0px var(--secondary);
+              background: var(--primary);
+            }
+            &:disabled {
+              background: rgba(81, 252, 143, 0.2);
+            }
+          }
+
+          .btn-not {
+            border: 0;
+            background: 0;
+            cursor: pointer;
+            margin-top: 5px;
+            font-family: "Gordita";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 15px;
+            text-align: center;
+            font-feature-settings: "kern" off;
+            color: rgba(0, 0, 0, 0.4);
+          }
+        }
+        .error {
+          margin-top: 5.5px;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          .msg {
+            font-family: "Gordita";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 13px;
+            font-feature-settings: "kern" off;
+            color: #fc5758;
+          }
+          img {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+      .closeBtn {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        @media screen and (max-width: 810px) {
+          display: none;
+        }
+        button {
+          cursor: pointer;
+          background-color: transparent;
+          border-radius: 50%;
+          border: 0;
+        }
+        .close {
+          width: 30px;
+          height: 30px;
+        }
+      }
+      .successMsg {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        @media screen and (min-width: 810px) {
+          height: calc(100% - 70px);
+        }
+        .message {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          gap: 16px;
+          img {
+            width: 80px;
+            height: 80px;
+          }
+          .title {
+            font-family: "Work Sans";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 27px;
+            color: #000000;
+          }
+          .description {
+            font-family: "Work Sans";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            color: #000000;
+            text-align: center;
+          }
+          @media screen and (max-width: 810px) {
+            margin-top: 20px;
+          }
+        }
+        .changeBtn {
+          cursor: pointer;
+          margin-top: 16px;
+          padding: 13px 32px 10px;
+          background: #ffffff;
+          border: 1px solid rgba(0, 0, 0, 0.2);
+          border-radius: 12px;
+          font-family: "Gordita";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 15px;
+          text-align: center;
+          font-feature-settings: "kern" off;
+          color: #000000;
+          white-space: nowrap;
+        }
+      }
+
+      @media screen and (max-width: 810px) {
+        width: 100%;
+        padding: 20px;
+      }
+    }
+  }
+  @media screen and (max-width: 810px) {
+    width: max-content;
+    min-height: 553px;
+    height: auto;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    width: max-content;
+  }
+  @media screen and (max-width: 470px) {
+    width: 100%;
+  }
+}

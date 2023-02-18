@@ -1,0 +1,95 @@
+.triple {
+  background-color: var(--secondary);
+  padding-top: 1px;
+  &_container {
+    padding-top: 120px;
+    padding-bottom: 160px;
+    width: 100%;
+    background-color: var(--primary);
+    border-radius: 40px;
+    @media screen and (max-width: 550px) {
+      padding-top: 30px;
+      padding-bottom: 33px;
+    }
+  }
+  &_content {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1170px;
+
+    .title {
+      margin-bottom: 40px;
+      font-family: 'Neue Machina';
+      font-weight: 700;
+      font-size: 55px;
+      line-height: 78px;
+      color: #000000;
+    }
+    .description {
+      margin-bottom: 89px;
+      font-family: 'Gordita';
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 25px;
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    .triple_content_bottom {
+      margin: 0 auto;
+      max-width: 1072px;
+      height: 365px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      //   background-color: dodgerblue;
+      background-image: url(../../../../assets/images/landing/triple/img-bg-triple.webp);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+      .logo {
+        width: 85px;
+        height: 107px;
+      }
+
+
+      @media screen and (max-width: 900px) {
+        flex-direction: column;
+        gap: 20px;
+        height: max-content;
+        background-image: url(../../../../assets/images/landing/triple/bg-mobile.webp);
+      }
+      @media screen and (max-width: 550px) {
+        gap: 66px;
+
+        & > img {
+          width: 112px;
+          height: 141px;
+        }
+      }
+    }
+
+    // Content
+    @media screen and (max-width: 550px) {
+      padding: 0 10px;
+      & > h1 {
+        margin-bottom: 16px;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 49px;
+      }
+
+      & > p {
+        margin-bottom: 32px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 23px;
+      }
+    }
+  }
+  transition: transform 0.5s, opacity 0.5s;
+  &.hidden {
+    opacity: 0;
+    transform: translateY(8rem);
+  }
+}
