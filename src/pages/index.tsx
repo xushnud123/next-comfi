@@ -1,7 +1,6 @@
 "use client";
 import { FC, useState, useEffect } from "react";
 import { PopupModal } from "react-calendly";
-import { useRouter } from "next/router";
 
 import { TopBar } from "@/components";
 import { analytic, Constants } from "@/helpers";
@@ -23,7 +22,6 @@ import {
 export interface HeroesProps {}
 
 const Landing: FC<HeroesProps> = () => {
-  const router = useRouter();
   const [doc, setDoc] = useState<HTMLElement>();
   const [calendly, setCalendly] = useState({
     open: false,
@@ -45,9 +43,6 @@ const Landing: FC<HeroesProps> = () => {
     });
   }, []);
 
-  if (router.isFallback) {
-    return <h1>Loading...</h1>;
-  }
 
   return (
     <>
