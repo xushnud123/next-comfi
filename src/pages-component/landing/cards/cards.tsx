@@ -1,6 +1,5 @@
 import { FC } from "react";
 import Image from "next/image";
-// import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import arrow from "@/assets/images/landing/statements/Icon.webp";
 import slug from "@/assets/images/landing/statements/Icon-_1_.webp";

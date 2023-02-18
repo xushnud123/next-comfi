@@ -1,8 +1,8 @@
 import { FC, useState } from 'react';
 import { motion } from 'framer-motion';
 
-// import withVideo from '@/assets/videos/difference/with.mp4';
-// import withoutVideo from '@/assets/videos/difference/without.mp4';
+import withVideo from '@/assets/videos/difference/with.mp4';
+import withoutVideo from '@/assets/videos/difference/without.mp4';
 
 import Plan from './components/plan';
 import Switch from './components/switch';
@@ -34,7 +34,7 @@ const Difference: FC = () => {
               loop
               muted
               controls={false}>
-              {/* <source src={open ? withoutVideo : withVideo} type='video/mp4' /> */}
+              <source src={open ? withoutVideo : withVideo} type='video/mp4' />
               <source src={''} type='video/mp4' />
             </motion.video>
           </div>
