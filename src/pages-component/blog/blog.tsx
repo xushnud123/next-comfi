@@ -23,6 +23,8 @@ const Blog: FC<BlogProps> = () => {
   const { data, isLoading } = useBlogs(100);
   const { data: filterData } = useFilters();
 
+  console.log(filterData)
+
   const [filtered, setFiltered] = useState<Types.BlogsData.Blogs[]>();
   const [activeCategory, setActiveCategory] = useState('more');
 

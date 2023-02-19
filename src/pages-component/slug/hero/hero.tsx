@@ -36,8 +36,6 @@ const Hero: FC<HeroProps> = ({
     return `${src}`;
   }
 
-  console.log(url);
-
   return (
     <div className={cls.wrapper}>
       <p className={cls.date}>

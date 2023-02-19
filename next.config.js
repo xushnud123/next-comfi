@@ -28,6 +28,14 @@ const nextConfig = {
 
     return config;
   },
+  // async rewrites() {
+  //   return [
+  //     {
+  //       source: "/blog/:path*",
+  //       destination: "localhost",
+  //     },
+  //   ];
+  // },
 };
 
 module.exports = nextConfig;

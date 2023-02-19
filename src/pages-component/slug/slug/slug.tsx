@@ -2,9 +2,9 @@
 import { FC, useState, useEffect } from "react";
 import { PopupModal } from "react-calendly";
 import { useRouter } from "next/router";
-// import { Helmet } from 'react-helmet-async';
-// import { helmetJsonLdProp } from 'react-schemaorg';
-// import { Person } from 'schema-dts';
+import { Helmet } from "react-helmet-async";
+import { helmetJsonLdProp } from "react-schemaorg";
+import { Person } from "schema-dts";
 
 import { CALENDLY_LINKS } from "@/helpers/constants";
 
@@ -17,6 +17,7 @@ import Hero from "../hero/hero";
 import Related from "../related/related";
 
 import cls from "./slug.module.scss";
+import Head from "next/head";
 
 interface SlugProps {}
 
@@ -38,15 +39,29 @@ const Slug: FC<SlugProps> = () => {
 
   return (
     <>
-      {/* <Helmet script={[helmetJsonLdProp<Person>(data?.schema)]}>
+      <Head>
+        <Helmet script={[helmetJsonLdProp<Person>(data?.schema)]} />
         <title>{data?.title}</title>
-        <meta name="description" content={data?.description} />
-        <meta property="og:url" content="https://comfi.app/" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={data?.title} />
-        <meta property="og:description" content={data?.description} />
-        <meta property="og:image" content={data?.url} />
-      </Helmet> */}
+        {/* <meta name='description' content={data?.description} />
+        <meta property='og:url' content='https://comfi.app/' />
+        <meta property='og:title' content={data?.title} />
+        <meta property='og:description' content={data?.description} />
+        <meta property='og:image' content={data?.url} /> */}
+
+        <title>{data?.title}</title>
+        <meta name='description' content={data?.description} />
+        <meta property='og:url' content='https://comfi.app/' />
+        <meta property='og:type' content='website' />
+        <meta property='og:title' content={data?.title} />
+        <meta property='og:description' content={data?.description} />
+        <meta property='og:image' content={data?.url} />
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta property='twitter:domain' content='comfi.app' />
+        <meta property='twitter:url' content='https://comfi.app/' />
+        <meta name='twitter:title' content={data?.title} />
+        <meta name='twitter:description' content={data?.description} />
+        <meta name='twitter:image' content={data?.url} />
+      </Head>
       <PopupModal
         url={calendly.link}
         prefill={{ email }}
