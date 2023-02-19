@@ -4,7 +4,8 @@ import { PopupModal } from "react-calendly";
 import { useRouter } from "next/router";
 import { Helmet } from "react-helmet-async";
 import { helmetJsonLdProp } from "react-schemaorg";
-import { Person } from "schema-dts";
+import { WebPage } from "schema-dts";
+import { NextSeo } from "next-seo";
 
 import { CALENDLY_LINKS } from "@/helpers/constants";
 
@@ -37,10 +38,11 @@ const Slug: FC<SlugProps> = () => {
     );
   }, []);
 
+  console.log(data?.schema);
+
   return (
     <>
       <Head>
-        <Helmet script={[helmetJsonLdProp<Person>(data?.schema)]} />
         <title>{data?.title}</title>
         <meta name='description' content={data?.description} />
         <meta property='og:url' content='https://comfi.app/' />
@@ -55,6 +57,17 @@ const Slug: FC<SlugProps> = () => {
         <meta name='twitter:description' content={data?.description} />
         <meta name='twitter:image' content={data?.url} />
       </Head>
+      <NextSeo
+        title={data?.title}
+        description={data?.description}
+        canonical='https://comfi.app/'
+        openGraph={helmetJsonLdProp<WebPage>(data?.schema)}
+        // twitter={{
+        //   handle: "@handle",
+        //   site: "@site",
+        //   cardType: "summary_large_image",
+        // }}
+      />
       <PopupModal
         url={calendly.link}
         prefill={{ email }}
