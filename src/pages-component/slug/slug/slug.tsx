@@ -41,14 +41,7 @@ const Slug: FC<SlugProps> = () => {
     <>
       <Head>
         <Helmet script={[helmetJsonLdProp<Person>(data?.schema)]} />
-        <title>{data?.title}</title>
-        {/* <meta name='description' content={data?.description} />
-        <meta property='og:url' content='https://comfi.app/' />
-        <meta property='og:title' content={data?.title} />
-        <meta property='og:description' content={data?.description} />
-        <meta property='og:image' content={data?.url} /> */}
-
-        <title>{data?.title}</title>
+        {/* <title>{data?.title}</title>
         <meta name='description' content={data?.description} />
         <meta property='og:url' content='https://comfi.app/' />
         <meta property='og:type' content='website' />
@@ -60,7 +53,44 @@ const Slug: FC<SlugProps> = () => {
         <meta property='twitter:url' content='https://comfi.app/' />
         <meta name='twitter:title' content={data?.title} />
         <meta name='twitter:description' content={data?.description} />
-        <meta name='twitter:image' content={data?.url} />
+        <meta name='twitter:image' content={data?.url} /> */}
+        <title>
+          Debt Financing vs. Revenue-Based Financing: Which is Best For Your
+          Startup?
+        </title>
+        <meta
+          name='description'
+          content='Discover the pros and cons of debt loans & revenue-based funding for your SaaS startup. Choose the best funding options today,'
+        />
+        <meta property='og:url' content='https://comfi.app/' />
+        <meta property='og:type' content='website' />
+        <meta
+          property='og:title'
+          content='Debt Financing vs. Revenue-Based Financing: Which is Best For Your Startup?'
+        />
+        <meta
+          property='og:description'
+          content='Discover the pros and cons of debt loans & revenue-based funding for your SaaS startup. Choose the best funding options today,'
+        />
+        <meta
+          property='og:image'
+          content='  https://comfi-blog-70fa24.ingress-daribow.ewp.live…/2023/01/Debt-vs.-Revenue-Based-Financing-min.jpg'
+        />
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta property='twitter:domain' content='comfi.app' />
+        <meta property='twitter:url' content='https://comfi.app/' />
+        <meta
+          name='twitter:title'
+          content='Debt Financing vs. Revenue-Based Financing: Which is Best For Your Startup?'
+        />
+        <meta
+          name='twitter:description'
+          content='Discover the pros and cons of debt loans & revenue-based funding for your SaaS startup. Choose the best funding options today,'
+        />
+        <meta
+          name='twitter:image'
+          content='  https://comfi-blog-70fa24.ingress-daribow.ewp.live…/2023/01/Debt-vs.-Revenue-Based-Financing-min.jpg'
+        />
       </Head>
       <PopupModal
         url={calendly.link}
