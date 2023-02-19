@@ -2,7 +2,6 @@
 import { FC, useState, useEffect } from "react";
 import { PopupModal } from "react-calendly";
 import { useRouter } from "next/router";
-import { Helmet } from "react-helmet-async";
 import { helmetJsonLdProp } from "react-schemaorg";
 import { WebPage } from "schema-dts";
 import { NextSeo } from "next-seo";
@@ -62,11 +61,6 @@ const Slug: FC<SlugProps> = () => {
         description={data?.description}
         canonical='https://comfi.app/'
         openGraph={helmetJsonLdProp<WebPage>(data?.schema)}
-        // twitter={{
-        //   handle: "@handle",
-        //   site: "@site",
-        //   cardType: "summary_large_image",
-        // }}
       />
       <PopupModal
         url={calendly.link}

@@ -1,9 +1,10 @@
 "use client";
 import { FC, useEffect, useState } from "react";
 import { PopupModal } from "react-calendly";
-// import { Helmet } from 'react-helmet-async';
-// import { helmetJsonLdProp } from 'react-schemaorg';
-// import { WebPage } from 'schema-dts';
+import Head from "next/head";
+import { helmetJsonLdProp } from "react-schemaorg";
+import { Person } from "schema-dts";
+import { NextSeo } from "next-seo";
 
 import useBlogs from "@/modules/blogs/hooks/use-blogs";
 import type * as Types from "@/modules/blogs/types";
@@ -45,17 +46,26 @@ const Blog: FC<BlogProps> = () => {
 
   return (
     <>
-      {/* {data && (
-        <Helmet script={[helmetJsonLdProp<WebPage>(data[0].schema)]}>
-          <title>{data[0].title}</title>
-          <meta name="description" content={data[0].description} />
-          <meta property="og:url" content="https://comfi.app/" />
-          <meta property="og:type" content="website" />
-          <meta property="og:title" content={data[0].title} />
-          <meta property="og:description" content={data[0].description} />
-          <meta property="og:image" content={data[0].url} />
-        </Helmet>
-      )} */}
+      {data && (
+        <>
+          <Head>
+            <title>{data[0].title}</title>
+            <meta name='description' content={data[0].description} />
+            <meta property='og:url' content='https://comfi.app/' />
+            <meta property='og:type' content='website' />
+            <meta property='og:title' content={data[0].title} />
+            <meta property='og:description' content={data[0].description} />
+            <meta property='og:image' content={data[0].url} />
+          </Head>
+          <NextSeo
+            title={data[0].title}
+            description={data[0]?.description}
+            canonical='https://comfi.app/'
+            openGraph={helmetJsonLdProp<Person>(data[0].schema)}
+          />
+        </>
+      )}
+
       <TopBar onCalendly={setCalendly} />
       <PopupModal
         url={calendly.link}
