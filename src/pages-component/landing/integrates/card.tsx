@@ -1,8 +1,13 @@
 import { FunctionComponent, useEffect } from "react";
+import dynamic from "next/dynamic";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-scroll";
+import { Loader } from "@/components";
 
-import { Video } from "@/components";
+const Video = dynamic(() => import("@/components/video/video"), {
+  loading: () => <Loader />,
+  ssr: false,
+});
 
 import comfi from "@/assets/videos/Fin/Customer-Clip-(slow-20-compressed).mp4";
 import vendor from "@/assets/videos/Fin/Vendor_Clip_(slow_20).mp4";

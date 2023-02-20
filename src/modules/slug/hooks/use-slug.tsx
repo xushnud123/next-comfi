@@ -1,6 +1,5 @@
 import axios from "axios";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { useRouter } from "next/router";
 import { QueryClient, useQuery, dehydrate } from "react-query";
 
 import { Slugs } from "../mappers";
@@ -19,8 +18,6 @@ const fetchSlugs = async (id: string) => {
 };
 
 const useSlugs = ({ slug }: { slug: string }) => {
-  // const router = useRouter();
-  // const pokemonID = typeof router.query?.id === "string" ? router.query.id : "";
   return useQuery<Types.SlugData.Slug, any, Types.SlugData.Slug>(
     ["slug", slug],
     // @ts-ignore

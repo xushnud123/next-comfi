@@ -1,15 +1,20 @@
 import { FC, memo, useEffect, useState } from "react";
 import cx from "classnames";
 import { useGlobalContext } from "@/context/context";
+import dynamic from "next/dynamic";
 import { AnimatePresence } from "framer-motion";
 
 import LeadMagnet from "@/pages-component/landing/chat/lead-magnet/lead-magnet";
 
+import Loader from "../page-loader/page-loader";
 import { NavbarProps } from "./components/navbar/navbar";
 import { Navbar } from "./components";
+const Modal = dynamic(() => import("@/components/modal/modal"), {
+  loading: () => <Loader />,
+  ssr: false,
+});
 
 import cls from "./top-bar.module.scss";
-import Modal from "../modal/modal";
 
 interface TopBarProps extends Pick<NavbarProps, "onCalendly"> {}
 

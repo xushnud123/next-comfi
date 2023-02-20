@@ -1,13 +1,21 @@
 import { FC, useState } from "react";
 import Image from "next/image";
-import Head from "next/head";
+import dynamic from "next/dynamic";
 import { AnimatePresence } from "framer-motion";
 import ReactPlayer from "react-player";
 import Slider from "react-slick";
 
+import { Loader } from "@/components";
 import { CALENDLY_LINKS, COMFI_INTRO_LINK } from "@/helpers/constants";
+const Modal = dynamic(() => import("@/components/modal/modal"), {
+  loading: () => <Loader />,
+  ssr: false,
+});
+const Video = dynamic(() => import("@/components/video/video"), {
+  loading: () => <Loader />,
+  ssr: false,
+});
 
-import { Modal, Video } from "@/components";
 import PlayIcon from "@/components/icons/play-icon";
 
 import comfi from "@/assets/images/new-hero/desktop.webp";
@@ -133,7 +141,8 @@ const Hero: FC<HeroProps> = ({ onCalendly }) => {
                 Quick intro to Comfi
               </div>
               <div className={cls.watch}>
-                <Image src={watch} width={17} height={17} alt='img not found' />5 min
+                <Image src={watch} width={17} height={17} alt='img not found' />
+                5 min
               </div>
             </div>
             <div className={cls.images}>
