@@ -145,7 +145,7 @@ export async function getStaticProps({ data }: { data: Types.SlugData.Slug }) {
 }
 
 export async function getStaticPaths() {
-  const paths = [...new Array(5)].map((i, index) => {
+  const paths = [...new Array(19)].map((i, index) => {
     return {
       params: {
         slug: `${index + 1}`,
