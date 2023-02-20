@@ -1,6 +1,5 @@
 import CountUp from "react-countup";
 import Image from "next/image";
-// import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import arrowBack from "@/assets/images/Icon-arrow-back-card.webp";
 import arrowTop from "@/assets/images/Icon-arrow-top-card.webp";

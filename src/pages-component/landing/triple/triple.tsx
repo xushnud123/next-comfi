@@ -1,4 +1,3 @@
-// import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Image from "next/image";
 
 import TinyStar from "@/assets/images/landing/triple/icon-tiny-star.webp";

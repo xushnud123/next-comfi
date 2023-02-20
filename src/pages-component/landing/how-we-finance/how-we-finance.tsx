@@ -1,6 +1,5 @@
 import { FC } from "react";
 import Image from "next/image";
-// import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import shield from "@/assets/images/finance/Illustration.webp";
 import block from "@/assets/images/finance/Illustration-_1_.webp";

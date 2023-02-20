@@ -1,6 +1,4 @@
 /** @type {import('next').NextConfig} */
-const withVideos = require("next-videos");
-// const withPlugins = require("next-compose-plugins");
 // const sass = require("@zeit/next-sass");
 // const css = require("@zeit/next-css");
 

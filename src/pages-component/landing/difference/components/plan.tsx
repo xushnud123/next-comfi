@@ -1,7 +1,6 @@
 import { FC } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-// import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import vector from '@/assets/images/icons/Vector.png';
 import vector_red from '@/assets/images/icons/Vector_red.png';

@@ -1,4 +1,3 @@
-// import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Image from "next/image";
 
 import cls from "./card.module.scss";

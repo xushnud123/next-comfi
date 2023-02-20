@@ -1,6 +1,5 @@
 import { FC } from "react";
 import Image from "next/image";
-// import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import icon2 from "@/assets/images/zero/Icon (1).webp";
 import icon3 from "@/assets/images/zero/Icon (2).webp";

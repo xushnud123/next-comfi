@@ -1,5 +1,4 @@
 import Image from "next/image";
-// import { Image } from 'react-lazy-load-image-component';
 
 import closeIcon from "@/assets/images/icons/icon-close-red.png";
 import tickIcon from "@/assets/images/icons/icon-tick-black.svg";

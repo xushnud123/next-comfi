@@ -1,5 +1,4 @@
 import Image from "next/image";
-// import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import icon1 from "@/assets/images/results/Icon.webp";
 import icon2 from "@/assets/images/results/Icon-_1_.webp";

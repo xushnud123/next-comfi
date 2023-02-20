@@ -1,6 +1,5 @@
 import { FC } from 'react';
 import Link  from 'next/link';
-// import { Helmet } from 'react-helmet-async';
 // import { helmetJsonLdProp } from 'react-schemaorg';
 import * as Scroll from 'react-scroll';
 // import { Article } from 'schema-dts';
