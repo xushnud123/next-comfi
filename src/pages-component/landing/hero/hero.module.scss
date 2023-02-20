@@ -398,11 +398,23 @@
       width: 100%;
       margin: 0 auto;
       .card {
+        max-width: 800px;
+        height: 530px;
         width: 100%;
+        position: relative;
+        @media screen and (max-width: 860px) {
+          max-width: 100%;
+          width: 100%;
+          height: auto;
+          img {
+            width: 100%;
+            position: relative !important;
+            height: auto !important;
+          }
+        }
         img {
           width: 100%;
-          object-fit: cover;
-          height: auto;
+          object-fit: contain;
         }
       }
     }
@@ -653,6 +665,7 @@
 
         .hero-video {
           position: absolute;
+          z-index: 6;
           bottom: 5%;
           left: 5%;
           border-radius: 50%;

@@ -28,7 +28,7 @@ interface HeroProps {
 const settings = {
   dots: true,
   infinite: true,
-  autoplay: true,
+  autoplay: false,
   speed: 750,
   draggable: true,
   autoplaySpeed: 3500,
@@ -85,18 +85,10 @@ const Hero: FC<HeroProps> = ({ onCalendly }) => {
           <div className={cls.slider}>
             <Slider {...settings}>
               <div className={cls.card}>
-                <Image
-                  loading='lazy'
-                  src={img1}
-                  alt='Sample invoice by Comfi payments, a buy now pay later solution for b2b SaaS companies.'
-                />
+                <Image src={img1} fill priority alt='img not found' />
               </div>
               <div className={cls.card}>
-                <Image
-                  loading='lazy'
-                  src={img2}
-                  alt='Demo checkout page with the option of splitting SaaS service fees into multiple payment installments using Comfi.'
-                />
+                <Image src={img2} fill priority alt='img not found' />
               </div>
             </Slider>
           </div>
@@ -104,23 +96,31 @@ const Hero: FC<HeroProps> = ({ onCalendly }) => {
             loading='lazy'
             src={star1}
             alt='img not found'
+            width={20}
+            height={20}
             className={cls.images1}
           />
           <Image
             loading='lazy'
             src={star1}
             alt='img not found'
+            width={70}
+            height={70}
             className={cls.images2}
           />
           <Image
             loading='lazy'
             src={star1}
             alt='img not found'
+            width={20}
+            height={20}
             className={cls.images3}
           />
           <Image
             loading='lazy'
             src={star2}
+            width={35}
+            height={35}
             alt='img not found'
             className={cls.images4}
           />
@@ -133,15 +133,19 @@ const Hero: FC<HeroProps> = ({ onCalendly }) => {
                 Quick intro to Comfi
               </div>
               <div className={cls.watch}>
-                <Image src={watch} alt='img not found' />5 min
+                <Image src={watch} width={17} height={17} alt='img not found' />5 min
               </div>
             </div>
             <div className={cls.images}>
               <div className={cls["hero-video"]}>
                 <Video mainVideo={heroVideo} inView={false} />
               </div>
-              <Image className={cls.img} src={comfi} alt='img not found' />
-              <Image className={cls.img2} src={mobile} alt='img not found' />
+              <div className={cls.img}>
+                <Image fill priority src={comfi} alt='img not found' />
+              </div>
+              <div className={cls.img2}>
+                <Image fill priority src={mobile} alt='img not found' />
+              </div>
             </div>
           </div>
         </div>

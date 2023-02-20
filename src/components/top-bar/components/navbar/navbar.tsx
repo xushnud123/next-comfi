@@ -1,10 +1,9 @@
 import { Dispatch, FC, SetStateAction } from "react";
 import cx from "classnames";
-import { motion } from "framer-motion";
+import { useRouter } from "next/router";
 import { Link as ScrollLink } from "react-scroll";
 
 import { CALENDLY_LINKS } from "@/helpers/constants";
-
 import Logo from "@/components/icons/logo";
 
 import cls from "./navbar.module.scss";
@@ -27,58 +26,36 @@ const Navbar: FC<NavbarProps> = ({
   onCalendly,
   onMail,
   mail,
-  calendly,
-}) => (
-  <div className={cls.wrapper}>
-    <div className={cx(cls.rows, openNav && cls["row-active"])}>
-      <div className={cls["subscribe-pdf"]}>
-        Download our FREE ‘
-        <span>
-          5-Step Guide on Revenue Growth for Bootstrapped & Seed Stage Startups
-        </span>
-        ’ in 2023&nbsp;
-        <button
-          type='button'
-          className={cls.modal}
-          onClick={() => onMail(!mail)}>
-          Download PDF&nbsp; <div className={cls.arrow}>→</div>
-        </button>
-      </div>
-      <div className={cls.contain}>
-        <div className={cx(cls["wrapper-logo"])}>
-          <Logo onClick={() => (window.location.pathname = "/")} />
+}) => {
+  const router = useRouter();
+  return (
+    <div className={cls.wrapper}>
+      <div className={cx(cls.rows, openNav && cls["row-active"])}>
+        <div className={cls["subscribe-pdf"]}>
+          Download our FREE ‘
+          <span>
+            5-Step Guide on Revenue Growth for Bootstrapped & Seed Stage
+            Startups
+          </span>
+          ’ in 2023&nbsp;
           <button
-            onClick={() => setOpenNav(!openNav)}
-            className={cls["menu-btn"]}>
-            {openNav ? (
-              <motion.div
-                initial={{ scale: 0 }}
-                animate={{ rotate: 0, scale: 1 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 260,
-                  damping: 20,
-                }}
-                key='1'>
-                Close
-              </motion.div>
-            ) : (
-              <motion.div
-                initial={{ scale: 0 }}
-                animate={{ rotate: 0, scale: 1 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 260,
-                  damping: 20,
-                }}
-                key='2'>
-                Menu
-              </motion.div>
-            )}
+            type='button'
+            className={cls.modal}
+            onClick={() => onMail(!mail)}>
+            Download PDF&nbsp; <div className={cls.arrow}>→</div>
           </button>
         </div>
-        <div className={cx(cls.nav, openNav && cls.active)}>
-          {/* <ul className={cls['nav-ul']}>
+        <div className={cls.contain}>
+          <div className={cx(cls["wrapper-logo"])}>
+            <Logo onClick={() => router.push("/")} />
+            <button
+              onClick={() => setOpenNav(!openNav)}
+              className={cls["menu-btn"]}>
+              <div>{openNav ? "Close" : "Menu"}</div>
+            </button>
+          </div>
+          <div className={cx(cls.nav, openNav && cls.active)}>
+            {/* <ul className={cls['nav-ul']}>
             <li className={cls['nav-li']}>
               <Link
                 href=""
@@ -124,23 +101,24 @@ const Navbar: FC<NavbarProps> = ({
               </Link>
             </li>
           </ul> */}
-          <ScrollLink
-            href=''
-            activeClass='active'
-            to=''
-            smooth='easeInOutCubic'
-            duration={2000}
-            offset={-69}
-            className={cls.btn}
-            onClick={() =>
-              onCalendly({ open: true, link: CALENDLY_LINKS.HEADER })
-            }>
-            Get in touch <div className={cls.arrow}>&nbsp;→</div>
-          </ScrollLink>
+            <ScrollLink
+              href=''
+              activeClass='active'
+              to=''
+              smooth='easeInOutCubic'
+              duration={2000}
+              offset={-69}
+              className={cls.btn}
+              onClick={() =>
+                onCalendly({ open: true, link: CALENDLY_LINKS.HEADER })
+              }>
+              Get in touch <div className={cls.arrow}>&nbsp;→</div>
+            </ScrollLink>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Navbar;

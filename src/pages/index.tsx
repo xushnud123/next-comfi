@@ -1,22 +1,33 @@
 "use client";
 import { FC, useState, useEffect } from "react";
+import Head from "next/head";
+import dynamic from "next/dynamic";
 import { PopupModal } from "react-calendly";
 import { TopBar } from "@/components";
 import { analytic, Constants } from "@/helpers";
 
-import {
-  FAQ,
-  Hero,
-  HowWeFinance,
-  Integrations,
-  LandingFooter,
-  Latest,
-  Now,
-  Results,
-  TripleSlider,
-  ZeroRisk,
-} from "@/pages-component/landing";
-import Head from "next/head";
+const FAQ = dynamic(() => import("@/pages-component/landing/faq/faq"));
+const Hero = dynamic(() => import("@/pages-component/landing/hero/hero"));
+const HowWeFinance = dynamic(
+  () => import("@/pages-component/landing/how-we-finance/how-we-finance")
+);
+const Integrations = dynamic(
+  () => import("@/pages-component/landing/integrates/integrates")
+);
+const LandingFooter = dynamic(
+  () => import("@/pages-component/landing/landing-footer/landing-footer")
+);
+const Latest = dynamic(() => import("@/pages-component/landing/latest/latest"));
+const Now = dynamic(() => import("@/pages-component/landing/now/now"));
+const Results = dynamic(
+  () => import("@/pages-component/landing/results/results")
+);
+const TripleSlider = dynamic(
+  () => import("@/pages-component/landing/triple-slider/triple-slider")
+);
+const ZeroRisk = dynamic(
+  () => import("@/pages-component/landing/zero-risk/zero-risk")
+);
 
 export interface HeroesProps {}
 

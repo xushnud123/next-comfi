@@ -22,6 +22,8 @@ const HowWeFinance: FC<HowWeFinanceProps> = () => (
         <Image
           className={cls["card-img"]}
           loading='lazy'
+          width={220}
+          height={143}
           src={shield}
           alt='img not found'
         />
@@ -32,6 +34,8 @@ const HowWeFinance: FC<HowWeFinanceProps> = () => (
         <Image
           className={cls["card-img"]}
           loading='lazy'
+          width={220}
+          height={143}
           src={hour}
           alt='img not found'
         />
@@ -46,6 +50,8 @@ const HowWeFinance: FC<HowWeFinanceProps> = () => (
         <Image
           className={cls["card-img"]}
           loading='lazy'
+          width={220}
+          height={143}
           src={block}
           alt='img not found'
         />
@@ -59,6 +65,8 @@ const HowWeFinance: FC<HowWeFinanceProps> = () => (
         <Image
           className={cls["card-img"]}
           loading='lazy'
+          width={220}
+          height={143}
           src={data}
           alt='img not found'
         />

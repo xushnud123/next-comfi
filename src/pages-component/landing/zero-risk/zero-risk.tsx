@@ -14,7 +14,13 @@ const ZeroRisk: FC<ZeroRiskProps> = () => (
     <h1 className={cls.title}>Zero risk to you</h1>
     <div className={cls.container}>
       <div className={cls.card}>
-        <Image loading='lazy' src={icon1} alt='img not found' />
+        <Image
+          loading='lazy'
+          width={30}
+          height={30}
+          src={icon1}
+          alt='img not found'
+        />
         <h2 className={cls.text}>Get paid upfront</h2>
         <p className={cls.description}>
           {`Get your money straight into your bank account.&nbsp;We pay you in 7
@@ -22,7 +28,13 @@ const ZeroRisk: FC<ZeroRiskProps> = () => (
         </p>
       </div>
       <div className={cls.card}>
-        <Image loading='lazy' src={icon2} alt='img not found' />
+        <Image
+          loading='lazy'
+          width={30}
+          height={30}
+          src={icon2}
+          alt='img not found'
+        />
         <h2 className={cls.text}>Comfi bears risks</h2>
         <p className={cls.description}>
           Comfi bears most of the risks and is accountable for underwriting and
@@ -30,7 +42,13 @@ const ZeroRisk: FC<ZeroRiskProps> = () => (
         </p>
       </div>
       <div className={cls.card}>
-        <Image loading='lazy' src={icon3} alt='img not found' />
+        <Image
+          loading='lazy'
+          width={30}
+          height={30}
+          src={icon3}
+          alt='img not found'
+        />
         <h2 className={cls.text}>Zero credit impact </h2>
         <p className={cls.description}>
           Comfi scores your customers via connected data sources without

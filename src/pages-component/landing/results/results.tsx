@@ -19,6 +19,8 @@ const Results = () => (
             <p className={cls.percentage}>25-40%</p>
             <Image
               loading='lazy'
+              width={43}
+              height={43}
               src={icon1}
               className={cls.icon}
               alt='img not found'
@@ -31,6 +33,8 @@ const Results = () => (
             <p className={cls.percentage}>6-15%</p>
             <Image
               loading='lazy'
+              width={43}
+              height={43}
               src={icon2}
               className={cls.icon}
               alt='img not found'

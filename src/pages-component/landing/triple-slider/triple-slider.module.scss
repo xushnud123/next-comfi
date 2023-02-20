@@ -24,12 +24,12 @@
         .hero-title {
           display: inline-block;
           scroll-behavior: smooth;
-          font-family: 'Neue Machina';
+          font-family: "Neue Machina";
           font-style: normal;
           font-weight: 700;
           font-size: 60px;
           line-height: 80px;
-          font-feature-settings: 'ss01' on, 'ss03' on;
+          font-feature-settings: "ss01" on, "ss03" on;
           color: #000000;
           @media screen and (max-width: 750px) {
             font-size: 34px;
@@ -43,10 +43,10 @@
   .wrap {
     width: 100%;
     margin: 0 auto;
-    background-image: url('../../../assets/images/howitworks/Vector.svg');
+    background-image: url("../../../assets/images/howitworks/Vector.svg");
     padding: 90px 0 90px 0;
     .title {
-      font-family: 'Gordita';
+      font-family: "Gordita";
       font-style: normal;
       font-weight: 500;
       font-size: 24px;
@@ -74,7 +74,7 @@
         max-width: 1129px;
         margin: 0 auto;
         display: flex;
-        background-image: url('../../../assets/images/triple/Group\ 3739.webp');
+        background-image: url("../../../assets/images/triple/Group\ 3739.webp");
         background-position: center;
         background-size: 878px auto;
         background-repeat: no-repeat;
@@ -83,11 +83,14 @@
         height: 224px;
         position: relative;
         .messages {
-          position: absolute;
+          position: relative;
           bottom: -20%;
           left: 50%;
           transform: translate(-50%, -50%);
           display: none;
+          width: 150px;
+          height: 120px;
+
           @media screen and (max-width: 1189px) {
             display: block;
           }
@@ -118,7 +121,7 @@
               margin-top: 0;
             }
             .subtitle {
-              font-family: 'Gordita';
+              font-family: "Gordita";
               font-style: normal;
               font-weight: 500;
               font-size: 24px;
@@ -130,7 +133,7 @@
               height: 14.43px;
             }
             .description {
-              font-family: 'Gordita';
+              font-family: "Gordita";
               font-style: normal;
               font-weight: 400;
               font-size: 16px;
@@ -162,7 +165,7 @@
               margin-top: 0;
             }
             h1 {
-              font-family: 'Gordita';
+              font-family: "Gordita";
               font-style: normal;
               font-weight: 500;
               font-size: 24px;
@@ -174,7 +177,7 @@
               height: 14.43px;
             }
             p {
-              font-family: 'Gordita';
+              font-family: "Gordita";
               font-style: normal;
               font-weight: 400;
               font-size: 16px;

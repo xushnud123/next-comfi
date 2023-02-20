@@ -40,27 +40,40 @@ const TripleSlider: FC<TripleSliderProps> = () => {
           </h2>
           <div ref={ref} className={cls.container}>
             <div className={cls.row}>
-              <Image
-                src={message}
-                alt='Image not found'
-                className={cls.messages}
-              />
+              <div className={cls.messages}>
+                <Image src={message} alt='Image not found' fill priority />
+              </div>
               <div className={cls.left}>
                 <div className={cls.card}>
                   <h3 className={cls.subtitle}>Vendors</h3>
                 </div>
                 <div className={cls.card}>
-                  <Image src={star} alt='Image not found' />
+                  <Image
+                    src={star}
+                    width={14.43}
+                    height={14.43}
+                    alt='Image not found'
+                  />
                   <p className={cls.description}>Boosted revenue</p>
                 </div>
                 <div className={cls.line} />
                 <div className={cls.card}>
-                  <Image src={star} alt='Image not found' />
+                  <Image
+                    src={star}
+                    width={14.43}
+                    height={14.43}
+                    alt='Image not found'
+                  />
                   <p className={cls.description}>Higher retention</p>
                 </div>
                 <div className={cls.line} />
                 <div className={cls.card}>
-                  <Image src={star} alt='Image not found' />
+                  <Image
+                    src={star}
+                    width={14.43}
+                    height={14.43}
+                    alt='Image not found'
+                  />
                   <p>Increased sales velocity</p>
                 </div>
               </div>
@@ -69,17 +82,32 @@ const TripleSlider: FC<TripleSliderProps> = () => {
                   <h3 className={cls.subtitle}>Customers</h3>
                 </div>
                 <div className={cls.card}>
-                  <Image src={star} alt='Image not found' />
+                  <Image
+                    src={star}
+                    width={14.43}
+                    height={14.43}
+                    alt='Image not found'
+                  />
                   <p className={cls.description}>Secured runway</p>
                 </div>
                 <div className={cls.line} />
                 <div className={cls.card}>
-                  <Image src={star} alt='Image not found' />
+                  <Image
+                    src={star}
+                    width={14.43}
+                    height={14.43}
+                    alt='Image not found'
+                  />
                   <p className={cls.description}>Yearly discounts</p>
                 </div>
                 <div className={cls.line} />
                 <div className={cls.card}>
-                  <Image src={star} alt='Image not found' />
+                  <Image
+                    src={star}
+                    width={14.43}
+                    height={14.43}
+                    alt='Image not found'
+                  />
                   <p className={cls.description}>Zero interest</p>
                 </div>
               </div>
