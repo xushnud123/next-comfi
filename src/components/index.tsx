@@ -4,3 +4,4 @@ export { default as Modal } from './modal/modal';
 export { default as Loader } from './page-loader/page-loader';
 export { default as TopBar } from './top-bar/top-bar';
 export { default as Video } from './video/video';
+export { default as Favicon } from './favicon/favicon'

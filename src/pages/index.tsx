@@ -1,10 +1,6 @@
 "use client";
 import { FC, useState, useEffect } from "react";
 import { PopupModal } from "react-calendly";
-import { helmetJsonLdProp } from "react-schemaorg";
-import { Article } from "schema-dts";
-import { NextSeo } from "next-seo";
-import { landingSchema } from "@/helpers/constants";
 import { TopBar } from "@/components";
 import { analytic, Constants } from "@/helpers";
 
@@ -49,17 +45,14 @@ const Landing: FC<HeroesProps> = () => {
   return (
     <>
       <Head>
-        <meta property='og:image' content='/public/OG.jpeg' />
+        <title>Comfi: Buy Now Pay Later for B2B SaaS</title>
+        <meta property='og:image' content='/OG.jpeg' />
         <meta
-          name='description'
           data-rh='true'
+          name='description'
           content='Buy now pay later technology for SaaS providers. Let your customers enjoy the annual discounts, pay monthly and stay with you longer.'
         />
       </Head>
-      {/* <NextSeo
-        canonical='https://comfi.app/'
-        openGraph={helmetJsonLdProp<Article>(landingSchema)}
-      /> */}
       <TopBar onCalendly={setCalendly} />
       <PopupModal
         url={calendly.link}
