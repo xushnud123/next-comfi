@@ -30,6 +30,7 @@
     "framer-motion": "^9.0.4",
     "lodash": "^4.17.21",
     "lottie-react-component": "^1.0.0",
+    "netlify-cli": "^12.13.1",
     "next": "13.1.6",
     "next-compose-plugins": "^2.2.1",
     "next-seo": "^5.15.0",
