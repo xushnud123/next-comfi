@@ -1,0 +1,124 @@
+.wrapper {
+  width: 100%;
+  border-radius: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  .container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    border: 1px solid;
+    height: auto;
+    transition: linear 0.225s;
+    border: 1px solid transparent;
+    transition-property: border-color;
+    box-sizing: border-box;
+    border-radius: 16px;
+    overflow: hidden;
+    &:hover {
+      border: 1px solid #000000;
+      .left {
+        img {
+          transform: scale(1.05);
+        }
+      }
+    }
+    .left {
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      .hero {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all linear 0.225s;
+      }
+    }
+    .right {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: #fff;
+      .wrap {
+        .description {
+          font-family: "Work Sans";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 17px;
+          color: #000000;
+        }
+        .title {
+          margin-top: 16px;
+          font-family: "Work Sans";
+          font-style: normal;
+          font-weight: 650;
+          font-size: 30px;
+          line-height: 36px;
+          font-feature-settings: "ss03" on, "ss04" on, "salt" on;
+          color: #000000;
+          @media screen and (max-width: 908px) {
+            font-size: 26px;
+            line-height: 30px;
+          }
+          @media screen and (max-width: 750px) {
+            font-size: 20px;
+            line-height: 24px;
+          }
+        }
+        .row {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          &:nth-child(2) {
+            margin-top: 18px;
+          }
+          .btn {
+            padding: 4px 8px;
+            font-family: "Work Sans";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 17px;
+            color: #000000;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
+            background: transparent;
+          }
+          .text {
+            font-family: "Work Sans";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 17px;
+            color: #000000;
+          }
+          .img-wrap {
+            background: #e0f3e7;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            .person {
+              width: 100%;
+              height: 100%;
+              border-radius: 50%;
+            }
+          }
+        }
+        @media screen and (max-width: 600px) {
+          &:nth-child(2) {
+            margin-top: 16px;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 928px) {
+      grid-template-columns: 1.4fr 1fr;
+    }
+    @media screen and (max-width: 600px) {
+      height: auto;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

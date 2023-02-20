@@ -5,7 +5,6 @@ import { AnimatePresence } from "framer-motion";
 import ReactPlayer from "react-player";
 import Slider from "react-slick";
 
-
 import { CALENDLY_LINKS, COMFI_INTRO_LINK } from "@/helpers/constants";
 
 import { Modal, Video } from "@/components";
@@ -14,7 +13,7 @@ import PlayIcon from "@/components/icons/play-icon";
 import comfi from "@/assets/images/new-hero/desktop.webp";
 import watch from "@/assets/images/new-hero/Main.webp";
 import mobile from "@/assets/images/new-hero/mobil.webp";
-// import heroVideo from "@/assets/images/new-hero/video.mp4";
+import heroVideo from "@/assets/images/new-hero/video.mp4";
 import img2 from "@/assets/images/slider/Item (1).webp";
 import img1 from "@/assets/images/slider/Item.webp";
 import star2 from "@/assets/images/star/Pattern (1).webp";
@@ -139,7 +138,7 @@ const Hero: FC<HeroProps> = ({ onCalendly }) => {
             </div>
             <div className={cls.images}>
               <div className={cls["hero-video"]}>
-                <Video mainVideo={""} inView={false} />
+                <Video mainVideo={heroVideo} inView={false} />
               </div>
               <Image className={cls.img} src={comfi} alt='img not found' />
               <Image className={cls.img2} src={mobile} alt='img not found' />

@@ -1,0 +1,30 @@
+.wrapper {
+  width: 100%;
+  .hero {
+    display: block;
+    .row {
+      margin-top: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+    .cards {
+      margin-top: 16px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      box-sizing: border-box;
+      .left {
+        width: 265px;
+        height: 158px;
+      }
+      .right {
+        width: calc(100% - 265px);
+        .row {
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
+}

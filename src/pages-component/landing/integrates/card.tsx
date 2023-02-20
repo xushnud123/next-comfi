@@ -4,8 +4,8 @@ import { Link } from "react-scroll";
 
 import { Video } from "@/components";
 
-// import comfi from "@/assets/videos/Fin/Customer-Clip-(slow-20-compressed).mp4";
-// import vendor from "@/assets/videos/Fin/Vendor_Clip_(slow_20).mp4";
+import comfi from "@/assets/videos/Fin/Customer-Clip-(slow-20-compressed).mp4";
+import vendor from "@/assets/videos/Fin/Vendor_Clip_(slow_20).mp4";
 
 import cls from "./integrates.module.scss";
 
@@ -23,7 +23,7 @@ const Card: FunctionComponent = () => {
       description: `Your sales reps can generate payment links and send them to customers via invoice or email. Customers
               are able to get 4-12-month zero interest installments.`,
       btnProps: "Learn more",
-      video: <Video mainVideo={''} inView={inView} />,
+      video: <Video mainVideo={vendor} inView={inView} />,
       id: 1,
     },
     {
@@ -32,7 +32,7 @@ const Card: FunctionComponent = () => {
       description:
         "If you have a self-serve checkout on your website you can embed Comfi as payment option and your customers will always have an option to pay flexibly.",
       btnProps: "Add Comfi checkout",
-      video: <Video mainVideo={''} inView={inView} />,
+      video: <Video mainVideo={comfi} inView={inView} />,
       id: 2,
     },
   ];

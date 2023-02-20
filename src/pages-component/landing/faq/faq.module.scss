@@ -1,4 +1,4 @@
-@import '../../../assets/styles/mixins';
+@import "../../../assets/styles/mixins";
 
 .wrapper {
   margin-top: 1px;
@@ -11,13 +11,13 @@
     .title {
       text-align: center;
       margin-bottom: 40px;
-      font-family: 'Neue Machina';
+      font-family: "Neue Machina";
       font-style: normal;
       font-weight: 700;
       font-size: 60px;
       line-height: 80px;
       text-align: center;
-      font-feature-settings: 'ss01' on, 'ss03' on;
+      font-feature-settings: "ss01" on, "ss03" on;
       color: #fff;
       @media screen and (max-width: 750px) {
         font-size: 34px;
@@ -50,7 +50,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        font-family: 'Gordita';
+        font-family: "Gordita";
         font-style: normal;
         font-weight: 500;
         font-size: 16px;
@@ -61,7 +61,7 @@
         transition: all linear 0.225s;
         gap: 10px;
         span {
-          font-family: 'Gordita';
+          font-family: "Gordita";
           font-style: normal;
           font-weight: 500;
           font-size: 16px;
@@ -106,6 +106,10 @@
         }
       }
       @media screen and (max-width: 525px) {
+        padding-left: 50px;
+        box-sizing: border-box;
+      }
+      @media screen and (max-width: 400px) {
         padding-left: 110px;
       }
     }

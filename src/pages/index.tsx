@@ -1,10 +1,10 @@
-"use client";
-import { FC, useState, useEffect } from "react";
-import { PopupModal } from "react-calendly";
+"use client"
+import { FC, useState, useEffect } from "react"
+import { PopupModal } from "react-calendly"
 
-import { TopBar } from "@/components";
-import { analytic, Constants } from "@/helpers";
-import { landingSchema } from "@/helpers/constants";
+import { TopBar } from "@/components"
+import { analytic, Constants } from "@/helpers"
+import { landingSchema } from "@/helpers/constants"
 
 import {
   FAQ,
@@ -17,32 +17,31 @@ import {
   Results,
   TripleSlider,
   ZeroRisk,
-} from "@/pages-component/landing";
+} from "@/pages-component/landing"
 
 export interface HeroesProps {}
 
 const Landing: FC<HeroesProps> = () => {
-  const [doc, setDoc] = useState<HTMLElement>();
+  const [doc, setDoc] = useState<HTMLElement>()
   const [calendly, setCalendly] = useState({
     open: false,
     link: "",
-  });
-  const [email, setEmail] = useState("");
+  })
+  const [email, setEmail] = useState("")
 
   useEffect(() => {
     setDoc(
       (typeof window !== "undefined" && document.getElementById("root")) ||
         document.body
-    );
-  }, []);
+    )
+  }, [])
 
   useEffect(() => {
     analytic("pageView", {
       page_title: Constants.PAGES.MAIN_LANDING,
-      page_url: window.location.href,
-    });
-  }, []);
-
+      // page_url: window.location.href,
+    })
+  }, [])
 
   return (
     <>
@@ -70,7 +69,7 @@ const Landing: FC<HeroesProps> = () => {
         onCalendly={setCalendly}
       />
     </>
-  );
-};
+  )
+}
 
-export default Landing;
+export default Landing

@@ -1,0 +1,307 @@
+.wrapper {
+  width: 100%;
+  margin-top: 36px;
+  .recommended {
+    width: 100%;
+    .title {
+      font-family: "Work Sans";
+      font-style: normal;
+      font-weight: 650;
+      font-size: 30px;
+      line-height: 36px;
+      font-feature-settings: "ss03" on, "ss04" on, "salt" on;
+      color: #000000;
+    }
+    .rows {
+      width: max-content;
+      overflow: scroll;
+      width: 100%;
+      padding-bottom: 10px;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .btn-wrap {
+        margin-top: 8px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-width: 661px;
+        .btn {
+          cursor: pointer;
+          border: 1.2px solid #000000;
+          border-radius: 16px;
+          padding: 9px 10px;
+          font-family: "Work Sans";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 17px;
+          color: #000000;
+          background: transparent;
+          white-space: nowrap;
+          transition: all linear 0.225s;
+          &:hover {
+            background-color: #000000;
+            color: #fff;
+          }
+          &.active {
+            background-color: #000000;
+            color: #fff;
+          }
+        }
+        .description {
+          cursor: pointer;
+          background: transparent;
+          border: 0;
+          padding: 9px 10px;
+          font-family: "Work Sans";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 17px;
+          color: #000000;
+          transition: all linear 0.225s;
+          border-radius: 16px;
+          &:hover {
+            background-color: #000000;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  .blogs {
+    margin-top: 36px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px;
+    .blog {
+      text-decoration: none;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: linear 0.225s;
+      border: 1.2px solid transparent;
+      transition-property: border-color;
+      box-sizing: border-box;
+      &:hover {
+        border: 1.2px solid #000000;
+        .left {
+          img {
+            transform: scale(1.1);
+          }
+        }
+      }
+      .container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 266px calc(100% - 266px);
+        background: #fff;
+        .left {
+          width: 100%;
+          height: 266px;
+          overflow: hidden;
+          position: relative;
+          @media screen and (max-width: 900px) {
+            height: auto;
+          }
+          img {
+            width: 100%;
+            height: 266px !important;
+            transition: linear 0.3s;
+            transition-property: transform;
+          }
+          .hero {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .right {
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .wrap {
+            .description {
+              font-family: "Work Sans";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 17px;
+              color: #000000;
+            }
+            .title {
+              margin-top: 16px;
+              font-family: "Work Sans";
+              font-style: normal;
+              font-weight: 650;
+              font-size: 24px;
+              line-height: 28px;
+              font-feature-settings: "ss03" on, "ss04" on, "salt" on;
+              color: #000000;
+              @media screen and (max-width: 908px) {
+                font-size: 26px;
+                line-height: 30px;
+              }
+              @media screen and (max-width: 750px) {
+                font-size: 20px;
+                line-height: 24px;
+              }
+            }
+            .row {
+              display: flex;
+              align-items: center;
+              gap: 16px;
+              &:nth-child(2) {
+                margin-top: 18px;
+              }
+              .btn {
+                padding: 4px 8px;
+                font-family: "Work Sans";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 17px;
+                color: #000000;
+                border: 1px solid rgba(0, 0, 0, 0.08);
+                border-radius: 8px;
+                background: transparent;
+              }
+              .text {
+                font-family: "Work Sans";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 17px;
+                color: #000000;
+              }
+              .img-wrap {
+                background: #e0f3e7;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                .person {
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 50%;
+                }
+              }
+            }
+            &:nth-child(2) {
+              margin-top: 16px;
+            }
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 600px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  .cards {
+    margin-top: 49px;
+    .row {
+      box-sizing: border-box;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border: 1.2px solid #000000;
+      border-radius: 16px;
+      padding: 48px 20px;
+      @media screen and (max-width: 750px) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 35px;
+        box-sizing: border-box;
+      }
+      .left {
+        align-self: center;
+        .text {
+          font-family: "Work Sans";
+          font-style: normal;
+          font-weight: 650;
+          font-size: 30px;
+          line-height: 36px;
+          font-feature-settings: "ss03" on, "ss04" on, "salt" on;
+          color: #000000;
+        }
+      }
+      .right {
+        width: 100%;
+        justify-self: flex-end;
+        align-items: center;
+        display: flex;
+        gap: 8px;
+        .email {
+          padding: 15px 16px 13px;
+          box-sizing: border-box;
+          gap: 10px;
+          width: 100%;
+          height: 44px;
+          background: #ffffff;
+          border: 1px solid rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+          border-radius: 12px;
+          font-family: "Gordita", sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 13px;
+          font-feature-settings: "kern" off;
+          color: rgba(0, 0, 0, 0.4);
+          transition: all linear 0.225s;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 3px transparent;
+          &:focus-visible,
+          &:focus {
+            box-shadow: 0 0 3px rgba(96, 255, 131, 1);
+          }
+          &:focus-visible {
+            outline: none;
+          }
+        }
+        .btn {
+          height: max-content;
+          box-sizing: border-box;
+          height: 44px;
+          padding: 16px 32px;
+          cursor: pointer;
+          background: #51fc8f;
+          border-radius: 15px;
+          font-family: "Gordita";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 15px;
+          font-feature-settings: "kern" off;
+          justify-content: center;
+          display: flex;
+          align-items: center;
+          color: #000000;
+          transition: linear 0.225s;
+          border: 1px solid #000000;
+          box-shadow: 2px 2px 0px transparent;
+          transition-property: box-shadow, background-color, border-color;
+          &:hover {
+            border: 1px solid var(--secondary);
+            box-shadow: 2px 2px 0px var(--secondary);
+            background: var(--primary);
+          }
+          @media screen and (max-width: 450px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.skeleton {
+  .container {
+    background: transparent !important;
+    .right {
+      background: #fff;
+    }
+  }
+}

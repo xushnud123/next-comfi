@@ -1,4 +1,5 @@
 import { FC } from "react";
+import Link from "next/link";
 import cx from "classnames";
 
 import { Linkedin, Medium, Twitter, Logo } from "../icons";
@@ -16,15 +17,15 @@ const Footer: FC<FooterProps> = ({ page }) => (
         <div className={cls.row}>
           <div className={cls.logo}>
             <Logo />
-            <a
+            <Link
               href='https://firebasestorage.googleapis.com/v0/b/comfi-prod.appspot.com/o/Comfi%20one-pager%20(19.10)_compressed.pdf?alt=media&token=67502f65-18af-44e0-a0b8-9fc09de259e4'
-              download=''
+              // download=''
               target='_blank'
               rel='noreferrer'
               className={cls.btn}>
               Get one-pager
               {/* <img src={download} alt="img not found" /> */}
-            </a>
+            </Link>
           </div>
           <div className={cls.links}>
             <a

@@ -1,4 +1,4 @@
-import { FC, memo, useEffect, useLayoutEffect, useState } from "react";
+import { FC, memo, useEffect, useState } from "react";
 import cx from "classnames";
 import { useGlobalContext } from "@/context/context";
 import { AnimatePresence } from "framer-motion";
@@ -22,13 +22,13 @@ const TopBar: FC<TopBarProps> = ({ onCalendly }) => {
     setTimeout(() => setOpenMail((v) => v), 750);
   }, [setOpenMail]);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     typeof window !== "undefined" && openNav
       ? document.body.classList.toggle("open-modal")
       : document.body.classList.remove("open-modal");
   }, [openNav]);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     typeof window !== "undefined" && openMail
       ? document.body.classList.add("open-modal")
       : document.body.classList.remove("open-modal");
