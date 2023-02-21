@@ -41,7 +41,11 @@ const TripleSlider: FC<TripleSliderProps> = () => {
           <div ref={ref} className={cls.container}>
             <div className={cls.row}>
               <div className={cls.messages}>
-                <Image src={message} alt='Image not found' fill priority />
+                <Image
+                  src={message}
+                  alt='Image not found'
+                  sizes='(max-width:1170px) 300px'
+                />
               </div>
               <div className={cls.left}>
                 <div className={cls.card}>

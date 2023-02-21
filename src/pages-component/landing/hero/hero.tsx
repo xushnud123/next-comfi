@@ -95,10 +95,22 @@ const Hero: FC<HeroProps> = ({ onCalendly }) => {
           <div className={cls.slider}>
             <Slider {...settings}>
               <div className={cls.card}>
-                <Image src={img1} fill priority alt='img not found' />
+                <Image
+                  src={img1}
+                  fill
+                  sizes='(max-width:800px) 100px'
+                  priority
+                  alt='img not found'
+                />
               </div>
               <div className={cls.card}>
-                <Image src={img2} fill priority alt='img not found' />
+                <Image
+                  src={img2}
+                  fill
+                  priority
+                  sizes='(max-width:800px) 100px'
+                  alt='img not found'
+                />
               </div>
             </Slider>
           </div>
@@ -152,10 +164,21 @@ const Hero: FC<HeroProps> = ({ onCalendly }) => {
                 <Video mainVideo={heroVideo} inView={false} />
               </div>
               <div className={cls.img}>
-                <Image fill priority src={comfi} alt='img not found' />
+                <Image
+                  fill
+                  sizes='(max-width:1170px) 600px'
+                  src={comfi}
+                  alt='img not found'
+                  priority
+                />
               </div>
               <div className={cls.img2}>
-                <Image fill priority src={mobile} alt='img not found' />
+                <Image
+                  fill
+                  sizes='(max-width:600px) 300px'
+                  src={mobile}
+                  alt='img not found'
+                />
               </div>
             </div>
           </div>
