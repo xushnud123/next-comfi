@@ -1,6 +1,6 @@
 import { FC, ReactNode } from 'react';
 import cx from 'classnames';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 import cls from './modal.module.scss';
 
@@ -34,15 +34,15 @@ const Modal: FC<ModalProps> = ({ state, onState, children, className }) => {
   };
 
   return (
-    <motion.div
+    <m.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className={cx(cls.wrapper, state && cls.hidden, className && cls[className])}
       onClick={() => onState(!state)}
     >
-      <motion.div className={cls.container}>
-        <motion.div
+      <m.div className={cls.container}>
+        <m.div
           onClick={e => e.stopPropagation()}
           variants={dropIn}
           initial="hidden"
@@ -51,9 +51,9 @@ const Modal: FC<ModalProps> = ({ state, onState, children, className }) => {
           className={cls.row}
         >
           {children}
-        </motion.div>
-      </motion.div>
-    </motion.div>
+        </m.div>
+      </m.div>
+    </m.div>
   );
 };
 

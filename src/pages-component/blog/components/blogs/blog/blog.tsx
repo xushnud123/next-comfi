@@ -1,10 +1,8 @@
 import { FC } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 import { SortDate } from "@/helpers/helpers";
-
 import type * as Types from "@/modules/blogs/types";
 
 import person from "@/assets/images/blog/hero/Pic.svg";
@@ -21,15 +19,12 @@ const Blog: FC<BlogProps> = ({
   date,
   title,
   url,
-  id,
   minutes,
-  link,
   slug,
   twitter_img,
   author,
   avatarUrl,
   idx,
-  description,
 }) => {
   const dateSort = SortDate(Number(date.slice(5, 7)));
 
@@ -47,11 +42,7 @@ const Blog: FC<BlogProps> = ({
         data-aos-easing='ease-in-out'
         data-aos-anchor-placement='top-center'
         data-aos-offset='-300'>
-        <motion.div
-          layout
-          animate={{ opacity: 1 }}
-          initial={{ opacity: 0 }}
-          exit={{ opacity: 0 }}
+        <div
           className={cls.container}>
           <div className={cls.left}>
             <Image
@@ -95,7 +86,7 @@ const Blog: FC<BlogProps> = ({
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </Link>
     </>
   );

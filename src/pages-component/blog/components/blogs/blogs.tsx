@@ -1,6 +1,5 @@
 import { Dispatch, FC, SetStateAction, useEffect } from "react";
 import AOS from "aos";
-import { AnimatePresence, motion } from "framer-motion";
 
 import { CALENDLY_LINKS, skeltonArray } from "@/helpers/constants";
 
@@ -53,19 +52,17 @@ const Blogs: FC<BlogsProps> = ({
           />
         </div>
       )}
-      <motion.div className={cls.blogs}>
-        <AnimatePresence>
-          {filterBlogs?.map((blog, idx) => (
-            <Blog {...blog} key={blog.id} idx={idx} />
+      <div className={cls.blogs}>
+        {filterBlogs?.map((blog, idx) => (
+          <Blog {...blog} key={blog.id} idx={idx} />
+        ))}
+        {isLoading &&
+          skeltonArray.map((item) => (
+            <div key={item} style={{ height: "100%" }}>
+              <BlogSkeleton />
+            </div>
           ))}
-          {isLoading &&
-            skeltonArray.map((item) => (
-              <div key={item} style={{ height: "100%" }}>
-                <BlogSkeleton />
-              </div>
-            ))}
-        </AnimatePresence>
-      </motion.div>
+      </div>
       <div className={cls.cards}>
         <div className={cls.row}>
           <div className={cls.left}>

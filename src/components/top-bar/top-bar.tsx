@@ -2,7 +2,7 @@ import { FC, memo, useEffect, useState } from "react";
 import cx from "classnames";
 import { useGlobalContext } from "@/context/context";
 import dynamic from "next/dynamic";
-import { AnimatePresence } from "framer-motion";
+import { domMax, LazyMotion } from "framer-motion";
 
 import LeadMagnet from "@/pages-component/landing/chat/lead-magnet/lead-magnet";
 
@@ -41,13 +41,15 @@ const TopBar: FC<TopBarProps> = ({ onCalendly }) => {
 
   return (
     <div className={cx(cls.wrapper, openNav && cls.active)}>
-      <AnimatePresence initial={false} mode='wait' onExitComplete={() => null}>
+      <LazyMotion
+        features={domMax}
+        >
         {openMail && (
           <Modal state={openMail} onState={setOpenMail} className='landing'>
             <LeadMagnet setState={setOpenMail} />
           </Modal>
         )}
-      </AnimatePresence>
+      </LazyMotion>
       <Navbar
         openNav={openNav}
         setOpenNav={setOpenNav}

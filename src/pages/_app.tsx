@@ -2,6 +2,7 @@
 import { FC, useState } from "react";
 import { AppProps } from "next/app";
 import localFont from "@next/font/local";
+import { LazyMotion, domAnimation } from "framer-motion";
 import { QueryClient, QueryClientProvider, Hydrate } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import ContextProvider from "@/context/context";
@@ -76,9 +77,11 @@ const MyApp: FC<MyAppProps> = ({ Component, pageProps }) => {
     <QueryClientProvider client={queryClient}>
       <ContextProvider>
         <Hydrate state={pageProps.dehydratedState}>
-          <main className={work_sans.className}>
-            <Component {...pageProps} />
-          </main>
+          <LazyMotion features={domAnimation}>
+            <main className={work_sans.className}>
+              <Component {...pageProps} />
+            </main>
+          </LazyMotion>
         </Hydrate>
         <ReactQueryDevtools initialIsOpen={false} />
       </ContextProvider>

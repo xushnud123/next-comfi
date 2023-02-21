@@ -1,8 +1,8 @@
-import { FC } from 'react';
-import cx from 'classnames';
-import { motion } from 'framer-motion';
+import { FC } from "react";
+import cx from "classnames";
+import { domMax, LazyMotion, m } from "framer-motion";
 
-import classes from '../difference.module.scss';
+import classes from "../difference.module.scss";
 
 export interface SwitchProps {
   open: boolean;
@@ -10,9 +10,9 @@ export interface SwitchProps {
 }
 
 const spring = {
-  type: 'spring',
+  type: "spring",
   stiffness: 500,
-  damping: 20
+  damping: 20,
 };
 
 const Switch: FC<SwitchProps> = ({ open, setOpen }) => (
@@ -23,7 +23,9 @@ const Switch: FC<SwitchProps> = ({ open, setOpen }) => (
     <div className={classes.btn} onClick={() => setOpen(true)}>
       Another method
     </div>
-    <motion.div layout transition={spring} className={classes.circle} />
+    <LazyMotion features={domMax}>
+      <m.div layout transition={spring} className={classes.circle} />
+    </LazyMotion>
   </div>
 );
 

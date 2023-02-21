@@ -1,5 +1,5 @@
 import { FC, useState } from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 import withVideo from '@/assets/videos/difference/with.mp4';
 import withoutVideo from '@/assets/videos/difference/without.mp4';
@@ -24,7 +24,7 @@ const Difference: FC = () => {
           <Switch open={open} setOpen={setOpen} />
           <Plan open={open} />
           <div className={classes.video_container}>
-            <motion.video
+            <m.video
               key={+open}
               variants={boxVariant}
               initial='hidden'
@@ -36,7 +36,7 @@ const Difference: FC = () => {
               controls={false}>
               <source src={open ? withoutVideo : withVideo} type='video/mp4' />
               <source src={''} type='video/mp4' />
-            </motion.video>
+            </m.video>
           </div>
         </div>
       </div>

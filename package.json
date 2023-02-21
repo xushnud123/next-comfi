@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^13.1.6",
     "@next/font": "13.1.6",
     "@types/aos": "^3.0.4",
     "@types/node": "18.13.0",
@@ -48,6 +49,7 @@
     "react-select": "^5.7.0",
     "react-slick": "^0.29.0",
     "sass": "^1.58.1",
+    "schema-dts": "^1.1.0",
     "sharp": "^0.31.1",
     "slick-carousel": "^1.8.1",
     "typescript": "4.9.5"

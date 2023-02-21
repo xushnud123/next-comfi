@@ -2,7 +2,7 @@ import { Dispatch, FC, SetStateAction, useEffect, useState } from "react";
 import Image from "next/image";
 import cx from "classnames";
 import * as CompanyEmailValidator from "company-email-validator";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, domMax, LazyMotion, m } from "framer-motion";
 import Select from "react-select";
 
 import close from "@/assets/images/form/Close.webp";
@@ -119,132 +119,136 @@ const Form: FC<FormProps> = ({ onValidated, status, message, onState }) => {
             initial={false}
             mode='wait'
             onExitComplete={() => null}>
-            {state === "success" ? (
-              <motion.div
-                initial={{ scale: 0 }}
-                animate={{ rotate: 0, scale: 1 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 260,
-                  damping: 20,
-                }}
-                key='1'
-                className={cls.successMsg}>
-                <div className={cls.message}>
-                  <Image src={successImg} alt='img not found' />
-                  <h1 className={cls.title}>Thank you!</h1>
-                  <h2 className={cls.description}>
-                    Your guide is on its way to your inbox. Remember to check
-                    spam folder in case it’s not there.
-                  </h2>
-                </div>
-                <button
-                  type='button'
-                  onClick={() => setState("")}
-                  className={cls.changeBtn}>
-                  Change Email
-                </button>
-              </motion.div>
-            ) : (
-              <motion.div
-                initial={{ scale: 0 }}
-                animate={{ rotate: 0, scale: 1 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 260,
-                  damping: 20,
-                }}
-                key='2'
-                className={cls.wrap}>
-                <h1 className={cls.title}>Revenue plan for 2023!</h1>
-                <p className={cls.text}>
-                  Guide has a ton of actionable information, especially if you
-                  are a bootstrapped or a seed-stage startup.
-                </p>
-                <div className={cls.line} />
-                <form className={cls.form} onSubmit={handleSubmit}>
-                  <label htmlFor='firstName'>
-                    First name
-                    <input
-                      type='text'
-                      name='name'
-                      value={auth.name}
-                      onChange={(e) =>
-                        setAuth({ ...auth, name: e.target.value })
-                      }
-                      placeholder='Name'
-                      required
-                    />
-                  </label>
-                  <label htmlFor='email_text'>
-                    Email
-                    <input
-                      className={cx(errorEmail && cls.error)}
-                      type='email'
-                      name='email'
-                      value={auth.email}
-                      onChange={(e) => {
-                        setAuth({ ...auth, email: e.target.value });
-                        errorEmail && setErrorEmail(false);
-                      }}
-                      placeholder='Email'
-                      required
-                    />
-                    {errorEmail && (
-                      <div className={cls.error}>
-                        <Image src={error} alt='img not found' />
-                        <p className={cls.msg}>Please use your company email</p>
-                      </div>
-                    )}
-                  </label>
-
-                  <div className={cls.select}>
-                    What is your ACV?
-                    <Select
-                      // menuIsOpen={true}
-                      classNamePrefix='react-select'
-                      className={cls["custom-select"]}
-                      name='select'
-                      placeholder='Choose your ACV'
-                      // @ts-ignore
-                      onChange={(e) =>
-                        setAuth({
-                          ...auth,
-                          // @ts-ignore
-                          select: { label: e?.label, value: e?.value },
-                        })
-                      }
-                      styles={colorStyles}
-                      options={options}
-                      required
-                    />
+            <LazyMotion features={domMax}>
+              {state === "success" ? (
+                <m.div
+                  initial={{ scale: 0 }}
+                  animate={{ rotate: 0, scale: 1 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 260,
+                    damping: 20,
+                  }}
+                  key='1'
+                  className={cls.successMsg}>
+                  <div className={cls.message}>
+                    <Image src={successImg} alt='img not found' />
+                    <h1 className={cls.title}>Thank you!</h1>
+                    <h2 className={cls.description}>
+                      Your guide is on its way to your inbox. Remember to check
+                      spam folder in case it’s not there.
+                    </h2>
                   </div>
                   <button
-                    disabled={!auth.email && !auth.name && !auth.select}
-                    type='submit'
-                    className={cls.btn}>
-                    {status === "sending" ? (
-                      <span>Loading...</span>
-                    ) : (
-                      <span>Get my Copy</span>
-                    )}
+                    type='button'
+                    onClick={() => setState("")}
+                    className={cls.changeBtn}>
+                    Change Email
                   </button>
+                </m.div>
+              ) : (
+                <m.div
+                  initial={{ scale: 0 }}
+                  animate={{ rotate: 0, scale: 1 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 260,
+                    damping: 20,
+                  }}
+                  key='2'
+                  className={cls.wrap}>
+                  <h1 className={cls.title}>Revenue plan for 2023!</h1>
+                  <p className={cls.text}>
+                    Guide has a ton of actionable information, especially if you
+                    are a bootstrapped or a seed-stage startup.
+                  </p>
+                  <div className={cls.line} />
+                  <form className={cls.form} onSubmit={handleSubmit}>
+                    <label htmlFor='firstName'>
+                      First name
+                      <input
+                        type='text'
+                        name='name'
+                        value={auth.name}
+                        onChange={(e) =>
+                          setAuth({ ...auth, name: e.target.value })
+                        }
+                        placeholder='Name'
+                        required
+                      />
+                    </label>
+                    <label htmlFor='email_text'>
+                      Email
+                      <input
+                        className={cx(errorEmail && cls.error)}
+                        type='email'
+                        name='email'
+                        value={auth.email}
+                        onChange={(e) => {
+                          setAuth({ ...auth, email: e.target.value });
+                          errorEmail && setErrorEmail(false);
+                        }}
+                        placeholder='Email'
+                        required
+                      />
+                      {errorEmail && (
+                        <div className={cls.error}>
+                          <Image src={error} alt='img not found' />
+                          <p className={cls.msg}>
+                            Please use your company email
+                          </p>
+                        </div>
+                      )}
+                    </label>
 
-                  {status === "error" && (
-                    <div className={cls.error}>
-                      <Image src={error} alt='img not found' />
-                      <p className={cls.msg}>{message}</p>
+                    <div className={cls.select}>
+                      What is your ACV?
+                      <Select
+                        // menuIsOpen={true}
+                        classNamePrefix='react-select'
+                        className={cls["custom-select"]}
+                        name='select'
+                        placeholder='Choose your ACV'
+                        // @ts-ignore
+                        onChange={(e) =>
+                          setAuth({
+                            ...auth,
+                            // @ts-ignore
+                            select: { label: e?.label, value: e?.value },
+                          })
+                        }
+                        styles={colorStyles}
+                        options={options}
+                        required
+                      />
                     </div>
-                  )}
-                  <button
-                    type='reset'
-                    className={cls["btn-not"]}
-                    onClick={() => onState(false)}>
-                    Not Now
-                  </button>
-                </form>
-              </motion.div>
-            )}
+                    <button
+                      disabled={!auth.email && !auth.name && !auth.select}
+                      type='submit'
+                      className={cls.btn}>
+                      {status === "sending" ? (
+                        <span>Loading...</span>
+                      ) : (
+                        <span>Get my Copy</span>
+                      )}
+                    </button>
+
+                    {status === "error" && (
+                      <div className={cls.error}>
+                        <Image src={error} alt='img not found' />
+                        <p className={cls.msg}>{message}</p>
+                      </div>
+                    )}
+                    <button
+                      type='reset'
+                      className={cls["btn-not"]}
+                      onClick={() => onState(false)}>
+                      Not Now
+                    </button>
+                  </form>
+                </m.div>
+              )}
+            </LazyMotion>
           </AnimatePresence>
         </div>
       </div>

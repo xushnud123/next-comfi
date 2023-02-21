@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, domMax, LazyMotion } from "framer-motion";
 import ReactPlayer from "react-player";
 import Slider from "react-slick";
 
@@ -54,21 +54,23 @@ const Hero: FC<HeroProps> = ({ onCalendly }) => {
   return (
     <>
       <AnimatePresence initial={false} mode='wait' onExitComplete={() => null}>
-        {state && (
-          <Modal state={state} onState={setState}>
-            <ReactPlayer
-              className='player'
-              controls
-              width='100%'
-              style={{
-                height: "contain",
-                borderRadius: 40,
-                overflow: "hidden",
-              }}
-              url={COMFI_INTRO_LINK}
-            />
-          </Modal>
-        )}
+        <LazyMotion features={domMax}>
+          {state && (
+            <Modal state={state} onState={setState}>
+              <ReactPlayer
+                className='player'
+                controls
+                width='100%'
+                style={{
+                  height: "contain",
+                  borderRadius: 40,
+                  overflow: "hidden",
+                }}
+                url={COMFI_INTRO_LINK}
+              />
+            </Modal>
+          )}
+        </LazyMotion>
       </AnimatePresence>
       <div className={cls.wrapper}>
         <div className={cls.container}>
