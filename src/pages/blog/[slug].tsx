@@ -8,7 +8,6 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import { helmetJsonLdProp } from "react-schemaorg";
 import { WebPage } from "schema-dts";
 import { NextSeo } from "next-seo";
-import { Slugs as SlugsMappers } from "@/modules/slug/mappers";
 import useSlugs from "@/modules/slug/hooks/use-slug";
 import * as Types from "@/modules/blogs/types";
 
@@ -32,7 +31,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: 'blocking',
+    fallback: "blocking",
   };
 };
 
@@ -43,17 +42,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   );
   const data = await res.data;
 
-  const slug = await SlugsMappers(data);
-
   return {
     props: {
-      slugs: slug[0],
+      slugs: data,
     },
   };
 };
 
 const SlugWrapper: FC<SlugProps> = ({ slugs }) => {
-  console.log(slugs);
   const router = useRouter();
   const { slug } = router.query;
   // @ts-ignore
@@ -63,19 +59,34 @@ const SlugWrapper: FC<SlugProps> = ({ slugs }) => {
     <>
       {slugs && (
         <Head>
-          <title>{slugs?.title}</title>
-          <meta name='description' content={slugs?.description} />
+          <title>{slugs[0]?.title.rendered}</title>
+          <meta
+            name='description'
+            content={slugs[0]?.yoast_head_json.og_description}
+          />
           <meta property='og:url' content='https://comfi.app/' />
           <meta property='og:type' content='website' />
-          <meta property='og:title' content={slugs?.title} />
-          <meta property='og:description' content={slugs?.description} />
-          <meta property='og:image' content={slugs?.url} />
+          <meta property='og:title' content={slugs[0]?.title.rendered} />
+          <meta
+            property='og:description'
+            content={slugs[0]?.yoast_head_json.og_description}
+          />
+          <meta
+            property='og:image'
+            content={slugs[0]?.yoast_head_json.og_image[0]["url"]}
+          />
           <meta name='twitter:card' content='summary_large_image' />
           <meta property='twitter:domain' content='comfi.app' />
           <meta property='twitter:url' content='https://comfi.app/' />
-          <meta name='twitter:title' content={slugs?.title} />
-          <meta name='twitter:description' content={slugs?.description} />
-          <meta name='twitter:image' content={slugs?.url} />
+          <meta name='twitter:title' content={slugs[0]?.title.rendered} />
+          <meta
+            name='twitter:description'
+            content={slugs[0]?.yoast_head_json.og_description}
+          />
+          <meta
+            name='twitter:image'
+            content={slugs[0]?.yoast_head_json.og_image[0]["url"]}
+          />
         </Head>
       )}
       <NextSeo
