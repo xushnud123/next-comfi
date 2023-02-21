@@ -14,7 +14,7 @@ export const Slugs = (data: any[]): Types.SlugData.Slug[] => {
     link: get(item, 'link'),
     slug: get(item, 'slug'),
     content: get(item, 'content["rendered"]'),
-    twitter_img: get(item, 'yoast_head_json.twitter_image'),
+    twitter_img: get(item, 'yoast_head_json.twitter_image',null),
     description: get(item, 'yoast_head_json.og_description'),
     author: get(item, 'yoast_head_json.author'),
     avatarUrl: get(item, `yoast_head_json.schema["@graph"][5]['image']['contentUrl']`)
