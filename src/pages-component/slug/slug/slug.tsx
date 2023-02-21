@@ -10,7 +10,6 @@ import Hero from "../hero/hero";
 import Related from "../related/related";
 
 import cls from "./slug.module.scss";
-import axios from "axios";
 
 interface SlugProps {
   data?: Types.SlugData.Slug;
