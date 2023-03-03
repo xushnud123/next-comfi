@@ -4,7 +4,7 @@
 
 const nextConfig = {
   reactStrictMode: true,
-  distDir: "build",
+  distDir: "next/build",
   images: {
     domains: ["https://comfi-blog-70fa24.ingress-daribow.ewp.live"],
   },
