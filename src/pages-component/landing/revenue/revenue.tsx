@@ -1,9 +1,9 @@
 import CountUp from "react-countup";
 import Image from "next/image";
 
-import arrowBack from "@/assets/images/Icon-arrow-back-card.webp";
-import arrowTop from "@/assets/images/Icon-arrow-top-card.webp";
-import iconShield from "@/assets/images/icon-shield-card.webp";
+import arrowBack from "/public/assets/images/Icon-arrow-back-card.webp";
+import arrowTop from "/public/assets/images/Icon-arrow-top-card.webp";
+import iconShield from "/public/assets/images/icon-shield-card.webp";
 
 import  cls from "./revenue.module.scss";
 

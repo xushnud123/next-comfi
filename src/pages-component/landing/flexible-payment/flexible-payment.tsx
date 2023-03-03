@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-import closeIcon from "@/assets/images/icons/icon-close-red.png";
-import tickIcon from "@/assets/images/icons/icon-tick-black.svg";
-import logo from "@/assets/images/logo-black.svg";
+import closeIcon from "/public/assets/images/icons/icon-close-red.png";
+import tickIcon from "/public/assets/images/icons/icon-tick-black.svg";
+import logo from "/public/assets/images/logo-black.svg";
 
 import classes from "./flexible-payment.module.scss";
 

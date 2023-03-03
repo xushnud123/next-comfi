@@ -1,4 +1,4 @@
-@import '../../../assets/styles/mixins';
+@import "../../../styles/mixins";
 
 .wrapper {
   width: 100%;
@@ -6,13 +6,13 @@
   padding: 170px 0;
   border-radius: 40px;
   .title {
-    font-family: 'Neue Machina';
+    font-family: "Neue Machina";
     font-style: normal;
     font-weight: 700;
     font-size: 60px;
     line-height: 80px;
     text-align: center;
-    font-feature-settings: 'ss01' on, 'ss03' on;
+    font-feature-settings: "ss01" on, "ss03" on;
     color: #000000;
     box-sizing: border-box;
     padding: 0 30px;
@@ -38,7 +38,7 @@
       position: relative;
       overflow: hidden;
       .card-title {
-        font-family: 'Gordita';
+        font-family: "Gordita";
         font-style: normal;
         font-weight: 500;
         font-size: 24px;
@@ -51,7 +51,7 @@
       }
       .subtitle {
         margin-top: 10px;
-        font-family: 'Gordita';
+        font-family: "Gordita";
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
@@ -81,7 +81,7 @@
           border: 1px solid rgba(0, 0, 0, 0.2);
           border-radius: 100px;
           padding: 8px 10px 6px;
-          font-family: 'Gordita';
+          font-family: "Gordita";
           font-style: normal;
           font-weight: 400;
           font-size: 16px;

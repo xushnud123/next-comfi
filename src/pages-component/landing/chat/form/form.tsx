@@ -5,11 +5,11 @@ import * as CompanyEmailValidator from "company-email-validator";
 import { AnimatePresence, domMax, LazyMotion, m } from "framer-motion";
 import Select from "react-select";
 
-import close from "@/assets/images/form/Close.webp";
-import pdf from "@/assets/images/form/Frame 2.svg";
-import successImg from "@/assets/images/form/illustrations 7.svg";
-import error from "@/assets/images/icons/Warning.svg";
-import logo from "@/assets/images/landing/Logo.svg";
+import close from "/public/assets/images/form/Close.webp";
+import pdf from "/public/assets/images/form/Frame 2.svg";
+import successImg from "/public/assets/images/form/illustrations 7.svg";
+import error from "/public/assets/images/icons/Warning.svg";
+import logo from "/public/assets/images/landing/Logo.svg";
 
 import cls from "./form.module.scss";
 

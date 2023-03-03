@@ -3,8 +3,8 @@ import { FC, useEffect, useRef } from "react";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
-import message from "@/assets/images/triple/Content.svg";
-import star from "@/assets/images/triple/Logo.webp";
+import message from "/public/assets/images/triple/Content.svg";
+import star from "/public/assets/images/triple/Logo.webp";
 
 import cls from "./triple-slider.module.scss";
 

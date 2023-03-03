@@ -1,9 +1,9 @@
 import { FC } from "react";
 import Image from "next/image";
 
-import icon2 from "@/assets/images/zero/Icon (1).webp";
-import icon3 from "@/assets/images/zero/Icon (2).webp";
-import icon1 from "@/assets/images/zero/Icon.webp";
+import icon2 from "/public/assets/images/zero/Icon (1).webp";
+import icon3 from "/public/assets/images/zero/Icon (2).webp";
+import icon1 from "/public/assets/images/zero/Icon.webp";
 
 import cls from "./zero-risk.module.scss";
 

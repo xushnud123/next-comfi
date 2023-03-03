@@ -18,14 +18,14 @@ const Video = dynamic(() => import("@/components/video/video"), {
 
 import PlayIcon from "@/components/icons/play-icon";
 
-import comfi from "@/assets/images/new-hero/desktop.webp";
-import watch from "@/assets/images/new-hero/Main.webp";
-import mobile from "@/assets/images/new-hero/mobil.webp";
-import heroVideo from "@/assets/images/new-hero/video.mp4";
-import img2 from "@/assets/images/slider/Item (1).webp";
-import img1 from "@/assets/images/slider/Item.webp";
-import star2 from "@/assets/images/star/Pattern (1).webp";
-import star1 from "@/assets/images/star/Pattern.webp";
+import comfi from "/public/assets/images/new-hero/desktop.webp";
+import watch from "/public/assets/images/new-hero/Main.webp";
+import mobile from "/public/assets/images/new-hero/mobil.webp";
+import heroVideo from "/public/assets/images/new-hero/video.mp4";
+import img2 from "/public/assets/images/slider/Item (1).webp";
+import img1 from "/public/assets/images/slider/Item.webp";
+import star2 from "/public/assets/images/star/Pattern (1).webp";
+import star1 from "/public/assets/images/star/Pattern.webp";
 
 import cls from "./hero.module.scss";
 

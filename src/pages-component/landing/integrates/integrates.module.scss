@@ -1,4 +1,4 @@
-@import '../../../assets/styles/mixins';
+@import "../../../styles/mixins";
 
 .wrapper {
   width: 100%;
@@ -12,7 +12,8 @@
     width: 100%;
     background-size: cover;
     height: 100%;
-    background-image: url('../../../assets/images/howitworks/Vector.svg');
+    // background-image: url("../../../assets/images/howitworks/Vector.svg");
+     background-image: url("/public/assets/images/howitworks/Vector.svg");
     .container {
       @include center();
       .description {
@@ -27,7 +28,7 @@
           border-radius: 50%;
           background: #000;
         }
-        font-family: 'Gordita';
+        font-family: "Gordita";
         font-style: normal;
         font-weight: 500;
         font-size: 16px;
@@ -36,13 +37,13 @@
       }
       .title {
         margin-top: 20px;
-        font-family: 'Neue Machina';
+        font-family: "Neue Machina";
         font-style: normal;
         font-weight: 700;
         font-size: 60px;
         line-height: 80px;
         text-align: center;
-        font-feature-settings: 'ss01' on, 'ss03' on;
+        font-feature-settings: "ss01" on, "ss03" on;
         color: var(--secondary);
         @media screen and (max-width: 750px) {
           font-size: 34px;
@@ -63,19 +64,19 @@
           grid-gap: 50px;
           .left {
             .text {
-              font-family: 'Gordita';
+              font-family: "Gordita";
               font-style: normal;
               font-weight: 500;
               font-size: 12px;
               line-height: 13px;
               letter-spacing: 1px;
               text-transform: uppercase;
-              font-feature-settings: 'kern' off;
+              font-feature-settings: "kern" off;
               color: rgba(0, 0, 0, 0.4);
             }
             .card-title {
               margin-top: 20px;
-              font-family: 'Gordita';
+              font-family: "Gordita";
               font-style: normal;
               font-weight: 500;
               font-size: 24px;
@@ -84,7 +85,7 @@
             }
             .card-description {
               margin-top: 20px;
-              font-family: 'Gordita';
+              font-family: "Gordita";
               font-style: normal;
               font-weight: 400;
               font-size: 16px;
@@ -99,18 +100,19 @@
               background: var(--secondary);
               border-radius: 10px;
               padding: 10px 35px 8px;
-              font-family: 'Gordita';
+              font-family: "Gordita";
               font-style: normal;
               font-weight: 500;
               font-size: 14px;
               line-height: 15px;
               text-align: center;
-              font-feature-settings: 'kern' off;
+              font-feature-settings: "kern" off;
               color: var(--primary);
               transition: linear 0.225s;
               border: 1px solid transparent;
               box-sizing: border-box;
-              transition-property: background-color, color, box-shadow, border-color;
+              transition-property: background-color, color, box-shadow,
+                border-color;
               &:hover {
                 background: var(--primary);
                 border: 1px solid var(--secondary);

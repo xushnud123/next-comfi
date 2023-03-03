@@ -1,10 +1,10 @@
 import { FC } from "react";
 import Image from "next/image";
 
-import shield from "@/assets/images/finance/Illustration.webp";
-import block from "@/assets/images/finance/Illustration-_1_.webp";
-import hour from "@/assets/images/finance/Illustration-_2_.webp";
-import data from "@/assets/images/finance/Illustration-_3_.webp";
+import shield from "/public/assets/images/finance/Illustration.webp";
+import block from "/public/assets/images/finance/Illustration-_1_.webp";
+import hour from "/public/assets/images/finance/Illustration-_2_.webp";
+import data from "/public/assets/images/finance/Illustration-_3_.webp";
 
 import cls from "./how-we-finance.module.scss";
 

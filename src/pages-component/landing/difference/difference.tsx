@@ -1,8 +1,8 @@
 import { FC, useState } from 'react';
 import { m } from 'framer-motion';
 
-import withVideo from '@/assets/videos/difference/with.mp4';
-import withoutVideo from '@/assets/videos/difference/without.mp4';
+import withVideo from '/public/assets/videos/difference/with.mp4';
+import withoutVideo from '/public/assets/videos/difference/without.mp4';
 
 import Plan from './components/plan';
 import Switch from './components/switch';

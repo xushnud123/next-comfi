@@ -5,7 +5,7 @@ import Image from "next/image";
 import { SortDate } from "@/helpers/helpers";
 import type * as Types from "@/modules/blogs/types";
 
-import person from "@/assets/images/blog/hero/Pic.svg";
+import person from "/public/assets/images/blog/hero/Pic.svg";
 
 import cls from "../blogs.module.scss";
 

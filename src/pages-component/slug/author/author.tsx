@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import Image from 'next/image';
 
-import linkedin from '@/assets/images/footer/Frame 1321315205.webp';
-import twitter from '@/assets/images/footer/Frame 1321315206.webp';
+import linkedin from '/public/assets/images/footer/Frame 1321315205.webp';
+import twitter from '/public/assets/images/footer/Frame 1321315206.webp';
 
 import AuthorSkeleton from './author-skeleton/author-skeleton';
 

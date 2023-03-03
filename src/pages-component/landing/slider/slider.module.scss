@@ -18,7 +18,7 @@
       display: grid;
       grid-template-columns: 40% calc(60% - 96px);
       grid-gap: 96px;
-      background-image: url('../../../assets/images/landing/slider/01-min.webp');
+      background-image: url('/public/assets/images/landing/slider/01-min.webp');
       background-size: 900px auto;
       background-repeat: no-repeat;
       @media screen and (max-width: 1450px) {

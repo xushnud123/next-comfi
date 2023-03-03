@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-import TinyStar from "@/assets/images/landing/triple/icon-tiny-star.webp";
-import logo from "@/assets/images/landing/triple/logo-comfi.webp";
+import TinyStar from "/public/assets/images/landing/triple/icon-tiny-star.webp";
+import logo from "/public/assets/images/landing/triple/logo-comfi.webp";
 
 import Card, { IProps as ICardProps } from "./components/card";
 

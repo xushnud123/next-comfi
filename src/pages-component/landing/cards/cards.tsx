@@ -1,9 +1,9 @@
 import { FC } from "react";
 import Image from "next/image";
 
-import arrow from "@/assets/images/landing/statements/Icon.webp";
-import slug from "@/assets/images/landing/statements/Icon-_1_.webp";
-import person from "@/assets/images/landing/statements/Icon-_2_.webp";
+import arrow from "/public/assets/images/landing/statements/Icon.webp";
+import slug from "/public/assets/images/landing/statements/Icon-_1_.webp";
+import person from "/public/assets/images/landing/statements/Icon-_2_.webp";
 
 import classes from "./cards.module.scss";
 

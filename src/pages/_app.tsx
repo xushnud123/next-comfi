@@ -11,62 +11,7 @@ import "rc-slider/assets/index.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "react-loading-skeleton/dist/skeleton.css";
-import "@/assets/styles/main.scss";
-
-const work_sans = localFont({
-  src: [
-    {
-      path: "../assets/fonts/Work_Sans/static/WorkSans-Regular.woff2",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/Work_Sans/static/WorkSans-Medium.woff2",
-      weight: "500",
-      style: "italic",
-    },
-    {
-      path: "../assets/fonts/Work_Sans/static/WorkSans-Bold.woff2",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/gordita/Gordita-Regular.woff2",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/gordita/Gordita-Medium.woff2",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/neue-machina/NeueMachina-Bold.woff2",
-      weight: "bold",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/neue-machina/NeueMachina-Ultrabold.woff2",
-      weight: "bold",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/neue-machina/NeueMachina-Light.woff2",
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/neue-machina/NeueMachina-Regular.woff2",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/neue-machina/NeueMachina-Medium.woff2",
-      weight: "500",
-      style: "normal",
-    },
-  ],
-});
+import "@/styles/main.scss";
 
 interface MyAppProps extends AppProps {}
 
@@ -78,9 +23,7 @@ const MyApp: FC<MyAppProps> = ({ Component, pageProps }) => {
       <ContextProvider>
         <Hydrate state={pageProps.dehydratedState}>
           <LazyMotion features={domAnimation}>
-            <main className={work_sans.className}>
-              <Component {...pageProps} />
-            </main>
+            <Component {...pageProps} />
           </LazyMotion>
         </Hydrate>
         <ReactQueryDevtools initialIsOpen={false} />

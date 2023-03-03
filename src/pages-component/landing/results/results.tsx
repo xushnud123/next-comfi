@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-import icon1 from "@/assets/images/results/Icon.webp";
-import icon2 from "@/assets/images/results/Icon-_1_.webp";
+import icon1 from "/public/assets/images/results/Icon.webp";
+import icon2 from "/public/assets/images/results/Icon-_1_.webp";
 
 import cls from "./results.module.scss";
 

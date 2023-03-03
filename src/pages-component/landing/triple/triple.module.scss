@@ -42,7 +42,7 @@
       align-items: center;
       justify-content: space-between;
       //   background-color: dodgerblue;
-      background-image: url(../../../../assets/images/landing/triple/img-bg-triple.webp);
+      background-image: url('/public/assets/images/landing/triple/img-bg-triple.webp');
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -57,7 +57,7 @@
         flex-direction: column;
         gap: 20px;
         height: max-content;
-        background-image: url(../../../../assets/images/landing/triple/bg-mobile.webp);
+        background-image: url('/public/assets/images/landing/triple/bg-mobile.webp');
       }
       @media screen and (max-width: 550px) {
         gap: 66px;

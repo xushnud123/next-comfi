@@ -9,8 +9,8 @@ const Video = dynamic(() => import("@/components/video/video"), {
   ssr: false,
 });
 
-import comfi from "@/assets/videos/Fin/Customer-Clip-(slow-20-compressed).mp4";
-import vendor from "@/assets/videos/Fin/Vendor_Clip_(slow_20).mp4";
+import comfi from "/public/assets/videos/Fin/Customer-Clip-(slow-20-compressed).mp4";
+import vendor from "/public/assets/videos/Fin/Vendor_Clip_(slow_20).mp4";
 
 import cls from "./integrates.module.scss";
 

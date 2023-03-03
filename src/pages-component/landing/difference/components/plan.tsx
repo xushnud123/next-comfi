@@ -2,8 +2,8 @@ import { FC } from "react";
 import Image from "next/image";
 import { domMax, LazyMotion, m } from "framer-motion";
 
-import vector from "@/assets/images/icons/Vector.png";
-import vector_red from "@/assets/images/icons/Vector_red.png";
+import vector from "/public/assets/images/icons/Vector.png";
+import vector_red from "/public/assets/images/icons/Vector_red.png";
 
 import classes from "../difference.module.scss";
 
