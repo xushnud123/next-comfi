@@ -73,6 +73,7 @@ const Landing: FC<HeroesProps> = () => {
         // @ts-ignore
         rootElement={doc}
       />
+      hello world
       <Hero calendly={calendly} onCalendly={setCalendly} />
       <TripleSlider />
       <Integrations />
